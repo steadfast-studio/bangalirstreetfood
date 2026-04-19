@@ -1,6 +1,5 @@
 "use client";
 
-import React from "react";
 import gsap from "gsap";
 import TestimonialCard from "./TestimonialCard";
 import Heading2 from "./reusable/Heading2";
