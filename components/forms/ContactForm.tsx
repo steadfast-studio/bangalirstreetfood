@@ -3,9 +3,15 @@ import { Button } from "../ui/button";
 import { Input } from "../ui/input";
 import { Textarea } from "../ui/textarea";
 
-const ContactForm = ({ className = "", ...props }) => {
+const ContactForm = ({
+  className = "",
+  ...props
+}: {
+  className?: string;
+  [key: string]: unknown;
+}) => {
   return (
-    <form className={`flex w-full flex-col gap-y-4 ${className}`}>
+    <form className={`flex w-full flex-col gap-y-4 ${className}`} {...props}>
       <Input
         placeholder="Enter Name"
         type="text"
