@@ -8,7 +8,8 @@ export default function HeroVideo() {
       loop
       muted
       playsInline
-      preload="auto"
+      preload="metadata"
+      poster="/hero.jpeg"
     >
       <source src="/hero.mp4" />
     </video>
