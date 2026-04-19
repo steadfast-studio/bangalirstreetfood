@@ -268,7 +268,6 @@ body::-webkit-scrollbar {
   }
 }
 
-/* 📱➡️ Tablet Portrait (640px - 767px) */
 @media (min-width: 640px) {
   .hero-mask-intersect {
     min-height: 600px;

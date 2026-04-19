@@ -21,9 +21,7 @@ const WavyHero = ({ title, subtitle, description, bgImage }: WavyHeroProps) => {
       >
         {/* Overlay */}
         <div className="absolute inset-0 bg-black/40" />
-
-        {/* Content */}
-        <div className="relative z-10 mx-auto w-full max-w-6xl p-8 text-white">
+        <div className="relative mx-auto flex h-80 w-full max-w-6xl flex-col items-start justify-end p-8 text-center text-white sm:h-100">
           {subtitle && (
             <p className="mb-2 text-xs font-semibold tracking-[0.25em] uppercase sm:text-sm">
               {subtitle}
@@ -35,7 +33,7 @@ const WavyHero = ({ title, subtitle, description, bgImage }: WavyHeroProps) => {
           </h1>
 
           {description && (
-            <p className="max-w-2xl text-sm text-gray-100/90 sm:text-base">
+            <p className="max-w-2xl text-left text-sm text-gray-100/90 sm:text-base">
               {description}
             </p>
           )}
