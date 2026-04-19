@@ -16,9 +16,9 @@ const Footer = () => {
             <Image
               src="/bangalir_street_food_logo1.jpg"
               alt="Bangalir Street Food Logo"
-              width={80}
-              height={80}
-              className="mx-auto mb-4 rounded-full object-cover sm:mx-0"
+              width={200}
+              height={200}
+              className="mx-auto mb-4 size-20 rounded-full object-cover sm:mx-0"
             />
             <h3 className="text-xl font-bold uppercase sm:text-2xl">
               Bangalir Street Food
