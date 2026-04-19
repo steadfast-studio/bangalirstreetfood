@@ -1,8 +1,6 @@
 "use client";
-// import { useState } from "react";
-// import { FaWhatsapp, FaInstagram, FaGithub, FaPlus } from "react-icons/fa";
 
-import React, { useRef, useState } from "react";
+import { useState, useRef } from "react";
 import {
   FaFacebookF,
   FaInstagram,
@@ -11,9 +9,9 @@ import {
   FaPhoneAlt,
   FaEnvelope,
   FaWhatsapp,
-  FaPlus,
+  FaCommentDots,
 } from "react-icons/fa";
-import { FaCommentDots } from "react-icons/fa";
+
 const SpeedDial = () => {
   const [open, setOpen] = useState(false);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
@@ -28,14 +26,14 @@ const SpeedDial = () => {
   const handleLeave = () => {
     timeoutRef.current = setTimeout(() => {
       setOpen(false);
-    }, 250); // 👈 sweet spot (200–300ms)
+    }, 250); // delay prevents instant close
   };
 
   const items = [
     {
       icon: <FaWhatsapp size={26} />,
       label: "WhatsApp",
-      link: "https://wa.me/911234567890",
+      link: "https://wa.me/911234567890?text=Hi%20I%20am%20interested%20in%20your%20furniture",
       color: "bg-green-500",
     },
     {
@@ -77,10 +75,14 @@ const SpeedDial = () => {
   ];
 
   return (
-    <div className="fixed right-8 bottom-8 z-50 flex flex-col items-end gap-4">
+    <div
+      className="fixed right-6 bottom-6 z-50 flex flex-col items-end gap-4 p-2"
+      onMouseEnter={handleEnter}
+      onMouseLeave={handleLeave}
+    >
       {/* Items */}
       <div
-        className={`flex flex-col items-end gap-4 transition-all duration-300 ${
+        className={`flex flex-col items-end gap-4 transition-all duration-300 ease-out ${
           open
             ? "translate-y-0 opacity-100"
             : "pointer-events-none translate-y-6 opacity-0"
@@ -94,14 +96,9 @@ const SpeedDial = () => {
             rel="noopener noreferrer"
             className="group flex items-center gap-3"
           >
-            {/* Label */}
-            <span className="rounded-md bg-black/70 px-3 py-1 text-sm text-white opacity-0 transition group-hover:opacity-100">
-              {item.label}
-            </span>
-
             {/* Icon */}
             <div
-              className={`flex h-14 w-14 items-center justify-center rounded-full text-white shadow-xl ${item.color} transition hover:scale-110`}
+              className={`flex h-14 w-14 items-center justify-center rounded-full text-white shadow ${item.color} transition hover:scale-110`}
             >
               {item.icon}
             </div>
@@ -111,13 +108,10 @@ const SpeedDial = () => {
 
       {/* Main Button */}
       <button
-        onMouseEnter={handleEnter}
-        onMouseLeave={handleLeave}
-        className={`flex h-16 w-16 items-center justify-center rounded-full bg-orange-600 text-white shadow-2xl transition-transform duration-300 hover:scale-110 ${
-          open ? "rotate-45" : ""
+        className={`flex h-16 w-16 items-center justify-center rounded-full bg-orange-600 text-white shadow transition-transform duration-300 hover:scale-110 ${
+          open ? "rotate-12" : ""
         }`}
       >
-        {/* <FaPlus size={22} /> */}
         <FaCommentDots size={26} />
       </button>
     </div>
