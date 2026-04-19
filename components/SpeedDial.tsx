@@ -48,12 +48,12 @@ const SpeedDial = () => {
       link: "https://instagram.com",
       color: "bg-pink-500",
     },
-    {
-      icon: <FaTwitter size={26} />,
-      label: "Twitter",
-      link: "https://twitter.com",
-      color: "bg-sky-500",
-    },
+    // {
+    //   icon: <FaTwitter size={26} />,
+    //   label: "Twitter",
+    //   link: "https://twitter.com",
+    //   color: "bg-sky-500",
+    // },
     {
       icon: <FaYoutube size={26} />,
       label: "YouTube",

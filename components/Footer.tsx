@@ -62,7 +62,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="mt-8 flex items-center justify-center gap-x-0 divide-x border-t border-teal-500 pt-4 text-xs sm:text-sm">
+        <div className="mt-8 flex flex-col items-center justify-center gap-x-0 border-t border-teal-500 pt-4 text-xs sm:flex-row sm:divide-x sm:text-sm">
           <p className="px-2">
             © {new Date().getFullYear()} Bangalir Street Food. All rights
             reserved
