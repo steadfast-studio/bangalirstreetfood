@@ -91,7 +91,7 @@ export default function Page() {
             })}
           </div>
           <div>
-            <Heading2>Explore the World with Us</Heading2>
+            <Heading2 >Explore the World with Us</Heading2>
 
             <p className="mt-16 max-w-5xl text-center text-gray-800">
               We didn&apos;t start in an office — we started on the road with a
