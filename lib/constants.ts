@@ -181,26 +181,25 @@ export const whyChooseUsData = [
     id: 1,
     title: "Expertly Crafted Itineraries",
     description:
-      "Our travel packages are meticulously designed by experienced travel experts to ensure you get the best out of your trip. We curate unique and personalized itineraries that cater to every kind of traveler, whether you're seeking adventure, culture, or relaxation.",
+      "Our travel packages are meticulously designed by experienced travel experts to ensure you get the best out of your trip.",
   },
   {
     id: 2,
     title: "Affordable Pricing",
     description:
-      "We believe that unforgettable travel experiences should be accessible to everyone. That's why we offer competitive pricing on all our tour packages without compromising on quality. Our transparent pricing ensures you get great value for your money.",
+      "We believe that unforgettable travel experiences should be accessible to everyone.",
   },
   {
     id: 3,
     title: "Exceptional Customer Service",
     description:
-      "Our dedicated customer support team is here to assist you every step of the way, from planning your trip to providing support during your travels. We prioritize your satisfaction and are committed to making your travel experience as smooth and enjoyable as possible.",
+      "Our dedicated customer support team is here to assist you every step of the way, from planning your trip to providing support during your travels.",
   },
   {
     id: 4,
     title: "Trusted by Thousands of Travelers",
     description:
-      "With a track record of successfully organizing trips for thousands of satisfied customers, we have built a reputation for reliability and excellence in the travel industry. Our customers trust us to deliver memorable and hassle-free travel experiences.",
-  },
+      "With a track record of successfully organizing trips for thousands of satisfied customers, we have built a reputation for reliability and excellence in the travel industry.",},
 ];
 
 // ! add social media links, phone number, emails etc here @kankanmondal22

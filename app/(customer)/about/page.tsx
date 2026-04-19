@@ -14,7 +14,7 @@ const TeamMemberCard = ({
   imageSrc: string;
 }) => {
   return (
-    <div className="group relative aspect-3/4 cursor-pointer overflow-hidden rounded-lg shadow-sm transition-shadow duration-300 hover:shadow-lg">
+    <div className="group relative aspect-3/2 overflow-hidden rounded-lg shadow-sm transition-shadow duration-300 hover:shadow-lg">
       {/* Full bleed image */}
       <Image src={imageSrc} alt={name} fill className="object-cover" />
 
@@ -23,8 +23,8 @@ const TeamMemberCard = ({
 
       {/* Name overlay at bottom */}
       <div className="absolute right-0 bottom-0 left-0 p-4">
-        <div className="bg-black/40 py-4 backdrop-blur-2xl">
-          <p className="text-xl leading-tight font-semibold text-white">
+        <div className="bg-black/40 py-2 backdrop-blur-2xl">
+          <p className="text-lg leading-tight font-semibold text-white">
             {name}
           </p>
           <p className="text-md mt-0.5 text-teal-300">{role}</p>
