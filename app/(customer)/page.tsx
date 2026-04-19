@@ -160,7 +160,7 @@ export default function Page() {
         <GalleryGrid images={images} />
       </HomeSections>
       {/* why choose us */}
-      <HomeSections className="max-w-none bg-teal-500">
+      <HomeSections className="max-w-none bg-teal-700">
         <Heading2
           className="text-white"
           subHeading="Travel smarter, safer, and more beautifully with us"

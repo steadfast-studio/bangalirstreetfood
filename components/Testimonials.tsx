@@ -3,6 +3,7 @@
 import gsap from "gsap";
 import TestimonialCard from "./TestimonialCard";
 import Heading2 from "./reusable/Heading2";
+import { useEffect, useRef } from "react";
 
 interface Testimonial {
   id: number;
@@ -23,10 +24,10 @@ const Testimonials = ({
   title = "What our customers say",
   subtitle = "Join thousands of happy customers enjoying authentic Bengali street food",
 }: Props) => {
-  const trackRef = React.useRef<HTMLDivElement | null>(null);
-  const tweenRef = React.useRef<gsap.core.Tween | null>(null);
+  const trackRef = useRef<HTMLDivElement | null>(null);
+  const tweenRef = useRef<gsap.core.Tween | null>(null);
 
-  React.useEffect(() => {
+  useEffect(() => {
     const el = trackRef.current;
     if (!el) return;
 
