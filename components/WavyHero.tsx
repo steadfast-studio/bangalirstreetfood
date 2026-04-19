@@ -10,9 +10,9 @@ type WavyHeroProps = {
 
 const WavyHero = ({ title, subtitle, description, bgImage }: WavyHeroProps) => {
   return (
-    <div className="w-full overflow-x-hidden">
+    <div className="h-110 w-full overflow-x-hidden sm:h-150">
       <div
-        className="hero-mask-intersect relative mx-auto mb-10 flex items-center overflow-hidden px-6 py-16 min-h-120 sm:px-10 lg:min-h-125"
+        className="hero-mask-intersect w-full bg-rose-300"
         style={{
           backgroundImage: `url(${bgImage})`,
           backgroundSize: "cover",

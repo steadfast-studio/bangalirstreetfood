@@ -229,20 +229,6 @@
   animation: slideInLeft 0.35s ease;
 }
 
-.hero-mask-intersect { 
-  background-size: cover; 
-  background-position: center;
-
-  -webkit-mask-image: url("/mask.png");
-  mask-image: url("/mask.png");
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
-  -webkit-mask-position: top center;
-  mask-position: top center;
-  -webkit-mask-size: 100% auto;
-  mask-size: 100% auto;
-}
-
 /* Hide scrollbar for all browsers */
 /* hide main page scrollbar */
 html,
@@ -254,4 +240,37 @@ body {
 html::-webkit-scrollbar,
 body::-webkit-scrollbar {
   display: none;
+}
+
+/* * HERO WAVY MASK */
+
+.hero-mask-intersect {
+  /* @apply relative mx-auto mb-10 flex min-h-120 items-center px-6 py-16 sm:px-10 lg:min-h-125; */
+  background-size: cover;
+  background-position: top;
+  overflow: hidden;
+
+  -webkit-mask-image: url("/mask.png");
+  mask-image: url("/mask.png");
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: top center;
+  mask-position: top center;
+  background-position: center top;
+  -webkit-mask-size: auto 90%;
+  mask-size: auto 90%;
+}
+
+/* 📱 Mobile (default: up to 639px) */
+@media (max-width: 639px) {
+  .hero-mask-intersect {
+    min-height: 50vh;
+  }
+}
+
+/* 📱➡️ Tablet Portrait (640px - 767px) */
+@media (min-width: 640px) {
+  .hero-mask-intersect {
+    min-height: 600px;
+  }
 }
