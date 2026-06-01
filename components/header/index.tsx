@@ -64,7 +64,7 @@ const Navbar = () => {
         {/* Logo */}
         <Link href="/" className="shrink-0">
           <Image
-            src="/kalokodhai.png"
+            src="/logo.png"
             alt="Logo"
             width={200}
             height={100}

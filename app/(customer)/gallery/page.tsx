@@ -121,7 +121,7 @@ const GalleryPage = () => {
       <WavyHero
         title="Gallery"
         subtitle=""
-        description="Explore our vibrant gallery showcasing the essence of Bangalore Street
+        description="Explore our vibrant gallery showcasing the essence of Bangalir Street
           Food."
         bgImage="/pahar.jpeg"
       />
