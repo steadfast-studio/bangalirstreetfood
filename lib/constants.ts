@@ -162,14 +162,14 @@ export const memberData = [
   },
   {
     id: "rohit",
-    name: "Rohit Kumar",
+    name: "Rohit Dutta",
     role: "Co-Founder & COO",
     image: "/gallery/bsf1.jpeg",
     bio: "Rohit is a seasoned operations expert with a background in hospitality management. As the COO, he ensures that every aspect of our travel services runs smoothly, from logistics to customer support. Rohit's commitment to excellence and attention to detail guarantees that our customers have a seamless and enjoyable travel experience.",
   },
   {
     id: "sourav",
-    name: "Sourav Ghosh",
+    name: "Sourav Sil",
     role: "Chief Marketing Officer",
     image: "/gallery/bsf1.jpeg",
     bio: "Sourav is a creative marketing strategist with a passion for storytelling. As the CMO, he leads our marketing efforts to connect with travelers and share the unique experiences we offer. Sourav's innovative approach to marketing helps us reach a wider audience and inspire more people to explore the world with us.",
@@ -199,7 +199,8 @@ export const whyChooseUsData = [
     id: 4,
     title: "Trusted by Thousands of Travelers",
     description:
-      "With a track record of successfully organizing trips for thousands of satisfied customers, we have built a reputation for reliability and excellence in the travel industry.",},
+      "With a track record of successfully organizing trips for thousands of satisfied customers, we have built a reputation for reliability and excellence in the travel industry.",
+  },
 ];
 
 // ! add social media links, phone number, emails etc here @kankanmondal22
