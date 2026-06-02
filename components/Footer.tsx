@@ -14,7 +14,7 @@ const Footer = () => {
         <div className="grid gap-8 text-center sm:grid-cols-2 sm:text-left lg:grid-cols-3">
           <div className="sm:col-span-2 lg:col-span-1">
             <Image
-              src="/bangalir_street_food_logo1.jpg"
+              src="/logo.png"
               alt="Bangalir Street Food Logo"
               width={200}
               height={200}
@@ -51,14 +51,40 @@ const Footer = () => {
               Contact
             </h4>
             <p className="mt-3 wrap-break-word">
-              <strong>Email:</strong> hello@bangalirstreetfood.com
+              <strong>Email:</strong> contact@bangalirstreetfood.com
             </p>
             <p className="text-sm leading-6">
-              <strong>Phone:</strong> +91 90000 00000
+              <strong>Phone:</strong> +91 9064351230
             </p>
-            {/* 
-            // ! Add social media links here @kankanmondal22
-            */}
+            <div className="flex gap-4 p-2">
+              <Link href={"https://www.facebook.com/@bangalirstreetfood"}>
+                <Image
+                  src="/icons/facebook.png"
+                  alt="Bangalir Street Food Logo"
+                  width={200}
+                  height={200}
+                  className="mx-auto size-10 object-cover sm:mx-0"
+                />
+              </Link>
+              <Link href={"https://www.youtube.com/@bangalirstreetfood"}>
+                <Image
+                  src="/icons/youtube.png"
+                  alt="Bangalir Street Food Logo"
+                  width={200}
+                  height={200}
+                  className="mx-auto size-10 object-cover sm:mx-0"
+                />
+              </Link>
+              <Link href={"https://www.instagram.com/@bangalirstreetfood"}>
+                <Image
+                  src="/icons/instagram.png"
+                  alt="Bangalir Street Food Logo"
+                  width={200}
+                  height={200}
+                  className="mx-auto size-10 object-cover sm:mx-0"
+                />
+              </Link>
+            </div>
           </div>
         </div>
 

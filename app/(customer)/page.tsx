@@ -91,7 +91,7 @@ export default function Page() {
             })}
           </div>
           <div>
-            <Heading2 >Explore the World with Us</Heading2>
+            <Heading2>Explore the World with Us</Heading2>
 
             <p className="mt-16 max-w-5xl text-center text-gray-800">
               We didn&apos;t start in an office — we started on the road with a
@@ -209,7 +209,15 @@ export default function Page() {
       >
         <div className="absolute inset-0 bg-black/60" />
         <div className="relative z-1 flex h-full w-full flex-col items-center p-4 backdrop-blur-xs md:flex-row">
-          <div className="w-full p-4 md:w-1/2 lg:px-16"></div>
+          <div className="w-full p-4 md:w-1/2 lg:px-16">
+            <Image
+              src="/logo.png"
+              alt="Bangalir Street Food Logo"
+              width={200}
+              height={200}
+              className="mx-auto md:size-60 sm:size-40 rounded-full object-cover sm:mx-0"
+            />
+          </div>
           <div className="w-full p-4 md:w-1/2 lg:px-16">
             <ContactForm />
           </div>

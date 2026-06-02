@@ -3,6 +3,15 @@ import { StatItem, WhyBestFeature, memberData } from "@/lib/constants";
 import HomeSections from "@/components/reusable/HomeSections";
 import { Button } from "@/components/ui/button";
 import WavyHero from "@/components/WavyHero";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+import ContactForm from "@/components/forms/ContactForm";
 
 const TeamMemberCard = ({
   name,
@@ -198,6 +207,21 @@ const AboutPage = () => {
               <br />
               You will Ask US
             </h2>
+            <div>
+              <Dialog>
+                <DialogTrigger className="text-primary rounded-md bg-white p-2 text-xl font-bold">
+                  Contact us
+                </DialogTrigger>
+                <DialogContent className="max-w-md">
+                  <DialogHeader>
+                    <DialogDescription>
+                      Have a question or want to plan a trip? Drop us a message.
+                    </DialogDescription>
+                  </DialogHeader>
+                  <ContactForm />
+                </DialogContent>
+              </Dialog>
+            </div>
             <Button className="mt-6 w-fit text-white" size={"xl"}>
               Contact Us
             </Button>
