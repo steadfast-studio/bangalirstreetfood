@@ -93,6 +93,48 @@ const galleryImages: GalleryImageData[] = [
     name: "Countryside Sunset",
     tags: "misc",
   },
+  {
+    id: "14",
+    src: "/gallery/bsf14.jpeg",
+    name: "Countryside Sunset",
+    tags: "misc",
+  },
+  {
+    id: "15",
+    src: "/gallery/bsf15.jpeg",
+    name: "Countryside Sunset",
+    tags: "misc",
+  },
+  {
+    id: "16",
+    src: "/gallery/bsf16.jpeg",
+    name: "Countryside Sunset",
+    tags: "misc",
+  },
+  {
+    id: "17",
+    src: "/gallery/bsf17.jpeg",
+    name: "Countryside Sunset",
+    tags: "misc",
+  },
+  {
+    id: "18",
+    src: "/gallery/bsf18.jpeg",
+    name: "Countryside Sunset",
+    tags: "misc",
+  },
+  {
+    id: "19",
+    src: "/gallery/bsf19.jpeg",
+    name: "Countryside Sunset",
+    tags: "misc",
+  },
+  {
+    id: "20",
+    src: "/gallery/bsf20.jpeg",
+    name: "Countryside Sunset",
+    tags: "misc",
+  },
 ];
 
 const rotations = ["-rotate-3", "rotate-2", "-rotate-1", "rotate-3"];

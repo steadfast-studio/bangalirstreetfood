@@ -14,7 +14,7 @@ const TeamMemberCard = ({
   imageSrc: string;
 }) => {
   return (
-    <div className="group relative aspect-3/2 overflow-hidden rounded-lg shadow-sm transition-shadow duration-300 hover:shadow-lg">
+    <div className="group relative aspect-2/3 overflow-hidden rounded-lg shadow-sm transition-shadow duration-300 hover:shadow-lg">
       {/* Full bleed image */}
       <Image src={imageSrc} alt={name} fill className="object-cover" />
 
