@@ -209,8 +209,8 @@ const AboutPage = () => {
             </h2>
             <div>
               <Dialog>
-                <DialogTrigger className="text-primary rounded-md bg-white p-2 text-xl font-bold">
-                  Contact us
+                <DialogTrigger className="bg-primary mt-6 rounded-md px-3 py-2.5 text-xl font-semibold text-white">
+                  Contact Us
                 </DialogTrigger>
                 <DialogContent className="max-w-md">
                   <DialogHeader>
@@ -222,9 +222,7 @@ const AboutPage = () => {
                 </DialogContent>
               </Dialog>
             </div>
-            <Button className="mt-6 w-fit text-white" size={"xl"}>
-              Contact Us
-            </Button>
+            
           </div>
         </section>
       </div>
