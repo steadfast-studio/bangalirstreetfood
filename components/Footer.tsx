@@ -56,7 +56,7 @@ const Footer = () => {
             <p className="text-sm leading-6">
               <strong>Phone:</strong> +91 9064351230
             </p>
-            <div className="flex gap-4 p-2">
+            <div className="flex items-center justify-center gap-4 p-2 sm:justify-start">
               <Link href={"https://www.facebook.com/@bangalirstreetfood"}>
                 <Image
                   src="/icons/facebook.png"
