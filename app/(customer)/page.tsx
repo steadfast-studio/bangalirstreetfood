@@ -22,6 +22,12 @@ import {
   whyChooseUsData,
 } from "@/lib/constants";
 import ContactForm from "@/components/forms/ContactForm";
+import {
+  FaFacebook,
+  FaInstagram,
+  FaYCombinator,
+  FaYoutube,
+} from "react-icons/fa";
 
 // !! Types alada file e rakhbi @kankanmondal22
 type SocialLinkProps = {
@@ -49,12 +55,12 @@ const SocialLink = ({ href, icon, label }: SocialLinkProps) => (
 export default function Page() {
   return (
     //hero
-    <div className="w-full">
+    <div className="mx-auto w-full overflow-x-hidden">
       {/* hero section */}
       <HeroVideo />
       <HomeSections className="max-w-none bg-linear-to-br from-gray-100 to-gray-200">
         <div className="mx-auto grid max-w-6xl grid-cols-1 md:grid-cols-2">
-          <div className="relative flex flex-col items-center">
+          <div className="relative flex flex-col items-center p-8">
             {memberData.map((member, index) => {
               const offset =
                 index % 3 === 0
@@ -125,22 +131,25 @@ export default function Page() {
             subtitle="We've actually been there. Watch our vlogs from Kashmir, Andaman, and Vizag — and imagine yourself in the frame."
           />
           <p className="mt-8 flex items-center justify-center text-lg">
-            Follow Us on{" "}
-            <SocialLink
+            Follow Us on
+            <a
               href="https://www.facebook.com/@bangalirstreetfood"
-              icon="/icons/facebook.png"
-              label="Facebook"
-            />
-            <SocialLink
-              href="https://www.youtube.com/@bangalirstreetfood"
-              icon="/icons/youtube.png"
-              label="YouTube"
-            />
-            <SocialLink
-              href="https://www.instagram.com/@bangalirstreetfood"
-              icon="/icons/instagram.png"
-              label="Instagram"
-            />
+              className="mx-2"
+            >
+              <FaFacebook className="ml-2 size-8" />
+            </a>
+            <a
+              href="https://www.youtube.com/@bangalirstreetfood1198"
+              className="mx-2"
+            >
+              <FaYoutube className="size-8" />
+            </a>
+            <a
+              href="https://www.instagram.com/bangalirstreetfood/"
+              className="mx-2"
+            >
+              <FaInstagram className="ml-2 size-8" />
+            </a>
             {" and "}
             for more travel stories and tips!
           </p>
@@ -215,7 +224,7 @@ export default function Page() {
               alt="Bangalir Street Food Logo"
               width={200}
               height={200}
-              className="mx-auto md:size-60 sm:size-40 rounded-full object-cover sm:mx-0"
+              className="mx-auto rounded-full object-cover sm:mx-0 sm:size-40 md:size-60"
             />
           </div>
           <div className="w-full p-4 md:w-1/2 lg:px-16">
