@@ -134,21 +134,27 @@ export default function Page() {
             Follow Us on
             <a
               href="https://www.facebook.com/@bangalirstreetfood"
+              target="_blank"
+              rel="noopener noreferrer"
               className="mx-2"
             >
-              <FaFacebook className="ml-2 size-8" />
+              <FaFacebook className="ml-2 size-8 hover:scale-120" />
             </a>
             <a
               href="https://www.youtube.com/@bangalirstreetfood1198"
+              target="_blank"
+              rel="noopener noreferrer"
               className="mx-2"
             >
-              <FaYoutube className="size-8" />
+              <FaYoutube className="size-8 hover:scale-120" />
             </a>
             <a
               href="https://www.instagram.com/bangalirstreetfood/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="mx-2"
             >
-              <FaInstagram className="ml-2 size-8" />
+              <FaInstagram className="ml-2 size-8 hover:scale-120" />
             </a>
             {" and "}
             for more travel stories and tips!
@@ -217,16 +223,14 @@ export default function Page() {
         style={{ backgroundImage: "url('/pahar.jpeg')" }}
       >
         <div className="absolute inset-0 bg-black/60" />
-        <div className="relative z-1 flex h-full w-full flex-col items-center p-4 backdrop-blur-xs md:flex-row">
-          <div className="w-full p-4 md:w-1/2 lg:px-16">
-            <Image
-              src="/logo.png"
-              alt="Bangalir Street Food Logo"
-              width={200}
-              height={200}
-              className="mx-auto rounded-full object-cover sm:mx-0 sm:size-40 md:size-60"
-            />
-          </div>
+        <div className="relative z-1 flex h-full w-full flex-col items-center justify-center p-4 backdrop-blur-xs md:flex-row">
+          <Image
+            src="/logo.png"
+            alt="Bangalir Street Food Logo"
+            width={200}
+            height={200}
+            className="m-4 w-full rounded-full object-cover sm:mx-0 sm:size-40 md:size-100 md:w-1/2 lg:px-16"
+          />
           <div className="w-full p-4 md:w-1/2 lg:px-16">
             <ContactForm />
           </div>
