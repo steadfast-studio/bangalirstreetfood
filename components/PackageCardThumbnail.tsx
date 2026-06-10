@@ -15,7 +15,7 @@ const PackageCardThumbnail = ({
   const [isLoading, setIsLoading] = useState(true);
 
   return (
-    <div className="relative aspect-4/3 w-full">
+    <div className="relative aspect-2/3 w-full">
       {isLoading && <Skeleton className="absolute inset-0 h-full w-full" />}
       <Image
         src={thumbnail || "/pahar.jpeg"}

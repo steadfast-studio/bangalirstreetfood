@@ -57,7 +57,11 @@ const Footer = () => {
               <strong>Phone:</strong> +91 9064351230
             </p>
             <div className="flex items-center justify-center gap-4 p-2 sm:justify-start">
-              <Link href={"https://www.facebook.com/@bangalirstreetfood"}>
+              <Link
+                href={"https://www.facebook.com/@bangalirstreetfood"}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Image
                   src="/icons/facebook.png"
                   alt="Bangalir Street Food Logo"
@@ -66,7 +70,11 @@ const Footer = () => {
                   className="mx-auto size-10 object-cover sm:mx-0"
                 />
               </Link>
-              <Link href={"https://www.youtube.com/@bangalirstreetfood"}>
+              <Link
+                href={"https://youtube.com/@bangalirstreetfood1198"}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Image
                   src="/icons/youtube.png"
                   alt="Bangalir Street Food Logo"
@@ -75,7 +83,11 @@ const Footer = () => {
                   className="mx-auto size-10 object-cover sm:mx-0"
                 />
               </Link>
-              <Link href={"https://www.instagram.com/@bangalirstreetfood"}>
+              <Link
+                href={"https://www.instagram.com/bangalirstreetfood/"}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Image
                   src="/icons/instagram.png"
                   alt="Bangalir Street Food Logo"

@@ -57,7 +57,29 @@ export default function Page() {
     //hero
     <div className="mx-auto w-full overflow-x-hidden">
       {/* hero section */}
-      <HeroVideo />
+      <div className="hidden lg:block">
+        <HeroVideo />
+      </div>
+      {/* Mobile image — shown only on mobile */}
+      <div className="block h-full w-full overflow-hidden md:hidden">
+        <Image
+          src="/mobilehero.png"
+          alt="App Preview Mobile"
+          width={500}
+          height={1000}
+          className="h-full w-full object-cover"
+        />
+      </div>
+      {/* Mobile image — shown only on mobile */}
+      <div className="block h-full w-full overflow-hidden lg:hidden">
+        <Image
+          src="/tabhero.png"
+          alt="App Preview Mobile"
+          width={500}
+          height={1000}
+          className="h-full w-full object-cover"
+        />
+      </div>
       <HomeSections className="max-w-none bg-linear-to-br from-gray-100 to-gray-200">
         <div className="mx-auto grid max-w-6xl grid-cols-1 md:grid-cols-2">
           <div className="relative flex flex-col items-center p-8">
@@ -138,7 +160,7 @@ export default function Page() {
               rel="noopener noreferrer"
               className="mx-2"
             >
-              <FaFacebook className="ml-2 size-8 hover:scale-120" />
+              <FaFacebook className="size-8 hover:scale-120" />
             </a>
             <a
               href="https://www.youtube.com/@bangalirstreetfood1198"
@@ -154,7 +176,7 @@ export default function Page() {
               rel="noopener noreferrer"
               className="mx-2"
             >
-              <FaInstagram className="ml-2 size-8 hover:scale-120" />
+              <FaInstagram className="size-8 hover:scale-120" />
             </a>
             {" and "}
             for more travel stories and tips!
@@ -229,7 +251,7 @@ export default function Page() {
             alt="Bangalir Street Food Logo"
             width={200}
             height={200}
-            className="m-4 w-full rounded-full object-cover sm:mx-0 sm:size-40 md:size-100 md:w-1/2 lg:px-16"
+            className="m-4 rounded-full object-cover sm:mx-0 md:w-1/2 lg:px-16"
           />
           <div className="w-full p-4 md:w-1/2 lg:px-16">
             <ContactForm />

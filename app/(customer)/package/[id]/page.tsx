@@ -53,7 +53,7 @@ const IndividualPackagePage = async ({
             <h2 className="mb-4 text-2xl font-semibold text-gray-900">
               Package Overview
             </h2>
-            <p className="leading-relaxed text-gray-700">
+            <p className="leading-relaxed text-gray-700 whitespace-pre-wrap">
               {packageDetails.description}
             </p>
           </section>
@@ -168,7 +168,7 @@ const IndividualPackagePage = async ({
                         <td className="w-12 border-r border-teal-600 bg-amber-50 p-3 text-sm font-semibold whitespace-nowrap text-teal-700">
                           Day {day.day}
                         </td>
-                        <td className="p-3 text-sm whitespace-pre-wrap text-gray-700 ">
+                        <td className="p-3 text-sm whitespace-pre-wrap text-gray-700">
                           {day.activities}
                         </td>
                       </tr>

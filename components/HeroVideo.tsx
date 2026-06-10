@@ -3,7 +3,7 @@ export default function HeroVideo() {
     <video
       width={1920}
       height={1080}
-      className="block h-[105svh] w-full object-cover will-change-transform"
+      className="block h-[105svh] w-full object-contain will-change-transform"
       autoPlay
       loop
       muted
