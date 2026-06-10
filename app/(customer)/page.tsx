@@ -60,6 +60,16 @@ export default function Page() {
       <div className="hidden lg:block">
         <HeroVideo />
       </div>
+      {/* Tablet image — shown only on tablet */}
+      <div className="md:block h-full w-full overflow-hidden hidden">
+        <Image
+          src="/tabhero.png"
+          alt="App Preview Tablet"
+          width={500}
+          height={1000}
+          className="h-full w-full object-cover"
+        />
+      </div>
       {/* Mobile image — shown only on mobile */}
       <div className="block h-full w-full overflow-hidden md:hidden">
         <Image
@@ -70,16 +80,7 @@ export default function Page() {
           className="h-full w-full object-cover"
         />
       </div>
-      {/* Mobile image — shown only on mobile */}
-      <div className="block h-full w-full overflow-hidden lg:hidden">
-        <Image
-          src="/tabhero.png"
-          alt="App Preview Mobile"
-          width={500}
-          height={1000}
-          className="h-full w-full object-cover"
-        />
-      </div>
+      
       <HomeSections className="max-w-none bg-linear-to-br from-gray-100 to-gray-200">
         <div className="mx-auto grid max-w-6xl grid-cols-1 md:grid-cols-2">
           <div className="relative flex flex-col items-center p-8">
