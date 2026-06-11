@@ -91,7 +91,7 @@ const BookingForm = ({
   }, [phoneNumberWatch, checkedSameWhatsapp, form.setValue, form]);
 
   return (
-    <div className="flex gap-4">
+    <div className="flex flex-col gap-4 lg:flex-row">
       <Card className="mx-auto w-full max-w-3xl bg-white">
         <CardHeader className="sr-only">
           <CardTitle className="px-8">

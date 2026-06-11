@@ -109,7 +109,7 @@ export default function Page() {
                     height={300}
                     width={300}
                     alt={member.name}
-                    className="aspect-3/2 object-cover"
+                    className="aspect-3/2 object-contain"
                   />
 
                   <p className="font-handwriting mt-3 text-center text-xl font-bold text-gray-800">
