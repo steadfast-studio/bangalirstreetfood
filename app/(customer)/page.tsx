@@ -61,7 +61,7 @@ export default function Page() {
         <HeroVideo />
       </div>
       {/* Tablet image — shown only on tablet */}
-      <div className="md:block h-full w-full overflow-hidden hidden">
+      <div className="hidden h-full w-full overflow-hidden md:block lg:hidden">
         <Image
           src="/tabhero.png"
           alt="App Preview Tablet"
@@ -80,7 +80,7 @@ export default function Page() {
           className="h-full w-full object-cover"
         />
       </div>
-      
+
       <HomeSections className="max-w-none bg-linear-to-br from-gray-100 to-gray-200">
         <div className="mx-auto grid max-w-6xl grid-cols-1 md:grid-cols-2">
           <div className="relative flex flex-col items-center p-8">
