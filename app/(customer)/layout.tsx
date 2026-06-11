@@ -1,6 +1,7 @@
 // import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Header from "@/components/header";
+import QuickDial from "@/components/QuickDial";
 import SpeedDial from "@/components/SpeedDial";
 import GsapProvider from "@/lib/gsap-provider";
 
@@ -16,7 +17,8 @@ export default function RootLayout({
         {children}
         <Footer />
       </main>
-      <SpeedDial />
+      {/* <SpeedDial /> */}
+      <QuickDial />
     </GsapProvider>
   );
 }

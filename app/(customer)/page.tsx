@@ -25,7 +25,6 @@ import ContactForm from "@/components/forms/ContactForm";
 import {
   FaFacebook,
   FaInstagram,
-  FaYCombinator,
   FaYoutube,
 } from "react-icons/fa";
 
@@ -153,33 +152,34 @@ export default function Page() {
             title="See It Before You Book It"
             subtitle="We've actually been there. Watch our vlogs from Kashmir, Andaman, and Vizag — and imagine yourself in the frame."
           />
-          <p className="mt-8 flex items-center justify-center text-lg">
+          <p className="mt-8 flex flex-wrap items-center justify-center gap-y-1 text-lg">
             Follow Us on
-            <a
-              href="https://www.facebook.com/@bangalirstreetfood"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mx-2"
-            >
-              <FaFacebook className="size-8 hover:scale-120" />
-            </a>
-            <a
-              href="https://www.youtube.com/@bangalirstreetfood1198"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mx-2"
-            >
-              <FaYoutube className="size-8 hover:scale-120" />
-            </a>
-            <a
-              href="https://www.instagram.com/bangalirstreetfood/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mx-2"
-            >
-              <FaInstagram className="size-8 hover:scale-120" />
-            </a>
-            {" and "}
+            <span className="flex items-center">
+              <a
+                href="https://www.facebook.com/@bangalirstreetfood"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mx-2"
+              >
+                <FaFacebook className="size-8 hover:scale-120" />
+              </a>
+              <a
+                href="https://www.youtube.com/@bangalirstreetfood1198"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mx-2"
+              >
+                <FaYoutube className="size-8 hover:scale-120" />
+              </a>
+              <a
+                href="https://www.instagram.com/bangalirstreetfood/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mx-2"
+              >
+                <FaInstagram className="size-8 hover:scale-120" />
+              </a>
+            </span>
             for more travel stories and tips!
           </p>
         </div>
