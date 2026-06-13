@@ -57,7 +57,7 @@ const actions = [
 const QuickDial = () => {
   return (
     <div>
-      <div className="fixed right-14 bottom-18 z-50">
+      <div className="fixed right-12 bottom-16 z-50">
         <Popover>
           <PopoverTrigger asChild>
             <Button
