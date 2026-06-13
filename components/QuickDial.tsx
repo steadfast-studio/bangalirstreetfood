@@ -5,7 +5,6 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover";
 import { Button } from "@/components/ui/button";
-import { Plus } from "lucide-react";
 import {
   FaWhatsapp,
   FaFacebook,
@@ -18,37 +17,37 @@ import {
 
 const actions = [
   {
-    icon: <FaWhatsapp className="size-8" />,
+    icon: <FaWhatsapp className="size-7" />,
     label: "WhatsApp",
     color: "bg-green-500",
     href: "https://wa.me/+91 9064351230",
   },
   {
-    icon: <FaFacebook className="size-8" />,
+    icon: <FaFacebook className="size-7" />,
     label: "Facebook",
     color: "bg-blue-600",
     href: "https://www.facebook.com/@bangalirstreetfood",
   },
   {
-    icon: <FaInstagram className="size-8" />,
+    icon: <FaInstagram className="size-7" />,
     label: "Instagram",
     color: "bg-pink-500",
     href: "https://www.instagram.com/bangalirstreetfood/",
   },
   {
-    icon: <FaYoutube className="size-8" />,
+    icon: <FaYoutube className="size-7" />,
     label: "YouTube",
     color: "bg-red-600",
     href: "https://youtube.com/@bangalirstreetfood1198",
   },
   {
-    icon: <FaPhone className="size-8" />,
+    icon: <FaPhone className="size-7" />,
     label: "Call",
     color: "bg-green-600",
     href: "+91 9064351230",
   },
   {
-    icon: <FaEnvelope className="size-8" />,
+    icon: <FaEnvelope className="size-7" />,
     label: "Email",
     color: "bg-gray-600",
     href: "contact@bangalirstreetfood.com",
@@ -65,13 +64,13 @@ const QuickDial = () => {
               size="icon"
               className="size-14 rounded-full bg-orange-500 hover:bg-orange-600"
             >
-              <FaCommentDots className="size-8" />
+              <FaCommentDots className="size-7" />
             </Button>
           </PopoverTrigger>
           <PopoverContent
             side="top"
             align="center"
-            className="mb-2 w-fit bg-transparent p-2"
+            className="mb-2 w-fit bg-transparent p-2 shadow-none ring-0"
           >
             <div className="flex flex-col items-center gap-3">
               {actions.map((action, i) => (
