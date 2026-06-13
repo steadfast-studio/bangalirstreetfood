@@ -44,13 +44,13 @@ const actions = [
     icon: <FaPhone className="size-7" />,
     label: "Call",
     color: "bg-green-600",
-    href: "+91 9064351230",
+    href: "tel:+91 9064351230",
   },
   {
     icon: <FaEnvelope className="size-7" />,
     label: "Email",
     color: "bg-gray-600",
-    href: "contact@bangalirstreetfood.com",
+    href: "mailto:contact@bangalirstreetfood.com",
   },
 ];
 
