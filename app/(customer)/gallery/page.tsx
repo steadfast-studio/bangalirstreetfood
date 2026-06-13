@@ -12,7 +12,6 @@ type GalleryImageData = {
   tags: "kashmir" | "andaman" | "vizag" | "misc";
 };
 
-const tags = ["all", "kashmir", "andaman", "vizag", "misc"] as const;
 // sample images for travel
 const galleryImages: GalleryImageData[] = [
   {
@@ -141,13 +140,6 @@ const rotations = ["-rotate-3", "rotate-2", "-rotate-1", "rotate-3"];
 
 const GalleryPage = () => {
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
-  const [filterTag, setFilterTag] = useState<
-    "all" | "kashmir" | "andaman" | "vizag" | "misc"
-  >("all");
-  const filteredData = useMemo(() => {
-    if (filterTag === "all") return galleryImages;
-    return galleryImages.filter((image) => image.tags === filterTag);
-  }, [filterTag]);
   const lightboxImages = useMemo(
     () =>
       galleryImages.map((image) => ({
@@ -169,21 +161,8 @@ const GalleryPage = () => {
       />
 
       <div className="mx-auto mt-16 max-w-6xl px-4 py-8">
-        {/* <div className="mb-12 flex w-fit gap-2">
-          {tags.map((tagItem) => {
-            return (
-              <button
-                key={tagItem}
-                onClick={() => setFilterTag(tagItem)}
-                className={`${filterTag === tagItem ? "bg-teal-700" : "bg-teal-500"} px-2 py-1 text-white capitalize hover:bg-teal-900`}
-              >
-                {tagItem}
-              </button>
-            );
-          })}
-        </div> */}
         <div className="grid grid-cols-1 gap-16 sm:grid-cols-2 lg:grid-cols-3">
-          {filteredData.map((image, index) => (
+          {galleryImages.map((image, index) => (
             <button
               key={image.id}
               type="button"

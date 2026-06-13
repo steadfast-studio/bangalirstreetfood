@@ -24,7 +24,7 @@ const IndividualPackagePage = async ({
     <div className="min-h-screen bg-gray-50">
       <div className="max-w-9xl relative mx-auto max-h-132 overflow-hidden bg-teal-50">
         <Image
-          src={packageDetails.thumbnail || "/pahar2.jpeg"}
+          src={ packageDetails.imageGallery?.[0] || packageDetails.thumbnail || "/pahar2.jpeg"}
           alt={packageDetails.title}
           width={1500}
           height={2000}
@@ -139,7 +139,7 @@ const IndividualPackagePage = async ({
             <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
               <InfoCard label="Duration" value={packageDetails.duration} />
               <InfoCard
-                label="Min Group Size"
+                label="Max Group Size"
                 value={`${packageDetails.maxGroupSize} people`}
               />
               <InfoCard

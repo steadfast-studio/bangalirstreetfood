@@ -105,7 +105,7 @@ const BookingForm = ({
             onSubmit={form.handleSubmit(onSubmit)}
           >
             {/* No of Adult & No of Children */}
-            <div className="flex justify-between gap-2">
+            <div className="flex flex-col md:flex-row md:justify-between md:gap-2">
               <Controller
                 name="noOfAdults"
                 control={form.control}
@@ -198,7 +198,7 @@ const BookingForm = ({
                 )}
               />
             </div>
-            <div className="flex justify-between gap-2">
+            <div className="flex flex-col md:flex-row md:justify-between md:gap-2">
               <Controller
                 name="primaryContactFirstName"
                 control={form.control}
@@ -267,13 +267,13 @@ const BookingForm = ({
             </div>
 
             {/* Phone Number */}
-            <div className="flex">
+            <div className="flex flex-col md:flex-row md:gap-2">
               <Controller
                 name="primaryContactPhone"
                 control={form.control}
                 render={({ field, fieldState }) => (
                   <Field
-                    className="w-full max-w-50"
+                    className="w-full md:max-w-50"
                     data-invalid={fieldState.invalid}
                   >
                     <FieldLabel htmlFor="primaryContactPhone">
@@ -287,7 +287,7 @@ const BookingForm = ({
                       aria-describedby="primaryContactPhone-error"
                       placeholder="e.g. 9876543210"
                       autoComplete="tel"
-                      className="max-w-48"
+                      className="w-fullmd:max-w-48"
                     />
                     <div className="min-h-5" id="primaryContactPhone-error">
                       <FieldError errors={[fieldState.error]} />
@@ -295,14 +295,14 @@ const BookingForm = ({
                   </Field>
                 )}
               />
-              <div className="flex grow items-center justify-start gap-2">
+              <div className="flex flex-col md:flex-row md:grow md:items-center justify-start gap-2">
                 <Controller
                   name="primaryContactWhatsApp"
                   control={form.control}
                   render={({ field, fieldState }) => (
                     <Field
                       data-invalid={fieldState.invalid}
-                      className="max-w-52"
+                      className="w-full md:max-w-52"
                     >
                       <FieldLabel htmlFor="primaryContactWhatsApp">
                         WhatsApp Number
@@ -316,7 +316,7 @@ const BookingForm = ({
                         placeholder="e.g. 9876543210"
                         autoComplete="tel"
                         readOnly={checkedSameWhatsapp}
-                        className="w-full max-w-48"
+                        className="w-full md:max-w-48"
                       />
                       <div
                         className="min-h-5"
@@ -327,7 +327,7 @@ const BookingForm = ({
                     </Field>
                   )}
                 />
-                <div className="flex min-w-24 items-center gap-1">
+                <div className="flex min-w-24 items-center gap-1 mb-4 md:mb-0">
                   <Checkbox
                     id="sameAsPhone"
                     checked={checkedSameWhatsapp}
