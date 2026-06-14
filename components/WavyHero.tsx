@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+
 type WavyHeroProps = {
   title: string;
   subtitle?: string;
@@ -10,16 +12,20 @@ type WavyHeroProps = {
 const WavyHero = ({ title, subtitle, description, bgImage }: WavyHeroProps) => {
   return (
     <div className="h-110 w-full overflow-x-hidden sm:h-150">
-      <div
-        className="hero-mask-intersect w-full"
-        style={{
-          backgroundImage: `url(${bgImage})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      >
+      <div className="hero-mask-intersect relative h-full w-full">
+        {/* Background image */}
+        <Image
+          src={bgImage}
+          alt={title}
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-center"
+        />
+
         {/* Overlay */}
         <div className="absolute inset-0 bg-black/40" />
+
         <div className="relative mx-auto flex h-80 w-full max-w-6xl flex-col items-start justify-end p-8 text-center text-white sm:h-100">
           {subtitle && (
             <p className="mb-2 text-xs font-semibold tracking-[0.25em] uppercase sm:text-sm">

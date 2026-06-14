@@ -3,15 +3,15 @@ export default function HeroVideo() {
     <video
       width={1920}
       height={1080}
-      className="block h-[105svh] w-full object-contain will-change-transform"
+      className="block h-auto w-full object-contain will-change-transform"
       autoPlay
       loop
       muted
       playsInline
       preload="metadata"
-      poster="/hero.jpeg"
+      poster="/hero/desktop.png"
     >
-      <source src="/hero.mp4" />
+      <source src="/hero/hero.mp4" />
     </video>
   );
 }

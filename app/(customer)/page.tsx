@@ -20,36 +20,10 @@ import {
   faqData,
   memberData,
   whyChooseUsData,
+  homeMemberData,
 } from "@/lib/constants";
 import ContactForm from "@/components/forms/ContactForm";
-import {
-  FaFacebook,
-  FaInstagram,
-  FaYoutube,
-} from "react-icons/fa";
-
-// !! Types alada file e rakhbi @kankanmondal22
-type SocialLinkProps = {
-  href: string;
-  icon: string;
-  label: string;
-};
-
-// !! Component alada file e rakhbi @kankanmondal22
-const SocialLink = ({ href, icon, label }: SocialLinkProps) => (
-  <Link
-    href={href}
-    className="inline-flex items-center rounded px-2 py-1 font-medium text-white"
-  >
-    <Image
-      src={icon}
-      alt={label}
-      className="h-12 w-12"
-      height={100}
-      width={100}
-    />
-  </Link>
-);
+import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
 
 export default function Page() {
   return (
@@ -62,7 +36,7 @@ export default function Page() {
       {/* Tablet image — shown only on tablet */}
       <div className="hidden h-full w-full overflow-hidden md:block lg:hidden">
         <Image
-          src="/tabhero.png"
+          src="/hero/tab.png"
           alt="App Preview Tablet"
           width={500}
           height={1000}
@@ -72,7 +46,7 @@ export default function Page() {
       {/* Mobile image — shown only on mobile */}
       <div className="block h-full w-full overflow-hidden md:hidden">
         <Image
-          src="/mobilehero.png"
+          src="/hero/mobile.png"
           alt="App Preview Mobile"
           width={500}
           height={1000}
@@ -80,69 +54,101 @@ export default function Page() {
         />
       </div>
 
-      <HomeSections className="max-w-none bg-linear-to-br from-gray-100 to-gray-200">
-        <div className="mx-auto grid max-w-6xl grid-cols-1 md:grid-cols-2">
-          <div className="relative flex flex-col items-center p-8">
-            {memberData.map((member, index) => {
-              const offset =
-                index % 3 === 0
-                  ? "-translate-x-12"
-                  : index % 3 === 1
-                    ? "translate-x-12"
-                    : "-translate-x-8";
-              const rotate =
-                index % 3 === 0
-                  ? "-rotate-3"
-                  : index % 3 === 1
-                    ? "rotate-3"
-                    : "rotate-8";
-
-              return (
-                <div
-                  key={member.id}
-                  className={`relative ${offset} ${rotate} ${index !== 0 ? "-mt-28" : ""} bg-white p-3 pb-6 shadow-md transition-transform duration-300 hover:-translate-y-28`}
-                  style={{ zIndex: index }}
-                >
-                  <Image
-                    src={member.image}
-                    height={300}
-                    width={300}
-                    alt={member.name}
-                    className="aspect-3/2 object-contain"
-                  />
-
-                  <p className="font-handwriting mt-3 text-center text-xl font-bold text-gray-800">
-                    {member.name}
-                  </p>
-                </div>
-              );
-            })}
+      <HomeSections className="max-w-none bg-linear-to-br px-0 py-0! xl:py-0!">
+        <section className="relative overflow-hidden bg-linear-to-b from-amber-50 via-orange-50/40 to-white py-16 md:py-24 w-full">
+          {/* Decorative background elements */}
+          <div className="pointer-events-none absolute inset-0 opacity-[0.04]">
+            <div
+              className="absolute inset-0"
+              style={{
+                backgroundImage:
+                  "url('https://www.transparenttextures.com/patterns/old-map.png')",
+              }}
+            />
           </div>
-          <div>
-            <Heading2>Explore the World with Us</Heading2>
+          <div className="pointer-events-none absolute top-10 -left-32 h-72 w-72 rounded-full bg-orange-200/30 blur-3xl" />
+          <div className="pointer-events-none absolute -right-24 bottom-0 h-96 w-96 rounded-full bg-amber-200/40 blur-3xl" />
 
-            <p className="mt-16 max-w-5xl text-center text-gray-800">
-              We didn&apos;t start in an office — we started on the road with a
-              camera. As YouTube travel vloggers, we&apos;ve explored
-              India&apos;s best-kept secrets on a shoestring. Now we&apos;re
-              bringing that same energy (and budget wisdom!) to plan the perfect
-              trip for you.
-            </p>
-            <p className="mt-6 max-w-5xl text-center text-gray-800">
-              No hidden charges. No cookie-cutter itineraries. Just real trips,
-              just like we used to take.
-            </p>
-            <div className="mx-auto mt-6 flex w-fit gap-4">
-              {" "}
-              <Button asChild>
-                <Link href="/about">Read Our Full Story</Link>
-              </Button>
-              <Button asChild className="bg-gray-50" variant="outline">
-                <Link href="/package">View Packages</Link>
-              </Button>
+          <div className="relative mx-auto grid max-w-6xl grid-cols-1 items-center gap-12 px-4 md:grid-cols-2 md:gap-8 md:px-8">
+            {/* Polaroid stack */}
+            <div className="relative flex flex-col items-center py-8 md:py-0">
+              {/* Decorative compass / stamp */}
+              <div className="absolute p-2 -top-4 right-4 hidden h-24 w-24 rotate-12 items-center justify-center rounded-full border-2 border-dashed border-amber-300 text-xs font-semibold tracking-widest text-amber-400 uppercase md:flex">
+                Est. on the road
+              </div>
+
+              <div className="relative flex flex-col items-center">
+                {homeMemberData.map((member, index) => {
+                  const offset =
+                    index % 3 === 0
+                      ? "-translate-x-12"
+                      : index % 3 === 1
+                        ? "translate-x-12"
+                        : "-translate-x-8";
+                  const rotate =
+                    index % 3 === 0
+                      ? "-rotate-6"
+                      : index % 3 === 1
+                        ? "rotate-6"
+                        : "rotate-3";
+
+                  return (
+                    <div
+                      key={member.id}
+                      className={`relative ${offset} ${rotate} ${
+                        index !== 0 ? "-mt-28 md:-mt-32" : ""
+                      } rounded-sm bg-white p-3 pb-6 shadow-[0_8px_30px_rgb(0,0,0,0.12)] ring-1 ring-black/5 transition-all duration-300 ease-out hover:z-50 hover:-translate-y-8 hover:scale-105 hover:rotate-0 hover:shadow-2xl`}
+                      style={{ zIndex: index }}
+                    >
+                      <Image
+                        src={member.image}
+                        height={300}
+                        width={300}
+                        alt={member.name}
+                        className="aspect-3/2 w-56 object-cover sm:w-64 md:w-72"
+                      />
+                      <p className="font-handwriting mt-3 text-center text-xl font-bold text-gray-800">
+                        {member.name}
+                      </p>
+                      {/* Tape accent */}
+                      <span className="absolute -top-3 left-1/2 h-6 w-16 -translate-x-1/2 -rotate-2 bg-amber-100/80 shadow-sm" />
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+
+            {/* Content */}
+            <div className="relative flex flex-col items-center text-center md:items-start md:text-left">
+              <span className="font-handwriting mb-2 text-sm font-semibold tracking-[0.2em] text-orange-500 uppercase">
+                Our Story
+              </span>
+
+              <Heading2>Explore the World with Us</Heading2>
+
+              <p className="mt-6 max-w-xl text-gray-700">
+                We didn&apos;t start in an office — we started on the road with
+                a camera. As YouTube travel vloggers, we&apos;ve explored
+                India&apos;s best-kept secrets on a shoestring. Now we&apos;re
+                bringing that same energy (and budget wisdom!) to plan the
+                perfect trip for you.
+              </p>
+              <p className="mt-4 max-w-xl text-gray-700">
+                No hidden charges. No cookie-cutter itineraries. Just real
+                trips, just like we used to take.
+              </p>
+
+              <div className="mt-8 flex w-fit flex-col gap-3 sm:flex-row sm:gap-4">
+                <Button asChild>
+                  <Link href="/about">Read Our Full Story</Link>
+                </Button>
+                <Button asChild className="bg-white" variant="outline">
+                  <Link href="/package">View Packages</Link>
+                </Button>
+              </div>
             </div>
           </div>
-        </div>
+        </section>
       </HomeSections>
       {/* The Stories we created*/}
       <HomeSections className="max-w-none">
@@ -159,25 +165,27 @@ export default function Page() {
                 href="https://www.facebook.com/@bangalirstreetfood"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mx-2"
+                className="group mx-2 transition-transform duration-300 hover:scale-110"
               >
-                <FaFacebook className="size-8 hover:scale-120" />
+                <FaFacebook className="size-8 transition-colors duration-200 group-hover:text-blue-700" />
               </a>
+
               <a
                 href="https://www.youtube.com/@bangalirstreetfood1198"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mx-2"
+                className="group mx-2 transition-transform duration-300 hover:scale-110"
               >
-                <FaYoutube className="size-8 hover:scale-120" />
+                <FaYoutube className="size-8 transition-colors duration-200 group-hover:text-red-600" />
               </a>
+
               <a
                 href="https://www.instagram.com/bangalirstreetfood/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mx-2"
+                className="group mx-2 transition-transform duration-300 hover:scale-110"
               >
-                <FaInstagram className="size-8 hover:scale-120" />
+                <FaInstagram className="size-8 transition-colors duration-200 group-hover:text-pink-500" />
               </a>
             </span>
             for more travel stories and tips!

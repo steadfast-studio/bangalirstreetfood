@@ -9,7 +9,7 @@ const HomeSections = ({
 }) => {
   return (
     <div
-      className={`mx-auto max-w-6xl p-8 py-24 xl:py-32 ${className}`}
+      className={`mx-auto max-w-6xl p-8 py-32 xl:py-44 ${className}`}
       style={style}
     >
       {children}

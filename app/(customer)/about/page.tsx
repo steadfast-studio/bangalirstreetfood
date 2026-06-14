@@ -47,34 +47,12 @@ const TeamMemberCard = ({
 const AboutPage = () => {
   return (
     <div className="mx-auto w-full overflow-x-hidden">
-      {/* Hero with full-width masked bottom */}
-      {/* <div
-        className="hero-mask-intersect relative mx-auto mb-10 flex items-center overflow-hidden px-6 py-16 sm:-mx-8 sm:min-h-80 sm:px-10 lg:min-h-125"
-        style={{
-          backgroundImage: "url('/Andaman-and-Nicobar-Islands-Package-1.jpg')",
-        }}
-      >
-        <div className="absolute inset-0 bg-black/40" />
-
-        <div className="relative z-1 mx-auto w-full max-w-6xl p-8 text-white">
-          <p className="mb-2 text-xs font-semibold tracking-[0.25em] uppercase sm:text-sm">
-            About
-          </p>
-          <h1 className="font-handwriting mb-2text-4xl mb-4 font-semibold sm:text-5xl md:text-6xl lg:text-7xl">
-            Our Story
-          </h1>
-          <p className="max-w-2xl text-sm text-gray-100/90 sm:text-base">
-            Discover the passion and dedication behind our travel agency,
-            committed to making your journeys unforgettable.
-          </p>
-        </div>
-      </div> */}
       <WavyHero
         title="Our Story"
         subtitle=""
         description="Discover the passion and dedication behind our travel agency,
             committed to making your journeys unforgettable."
-        bgImage="/Andaman-and-Nicobar-Islands-Package-1.jpg"
+        bgImage="/banners/about.jpg"
       />
 
       {/* Why We Are The Best */}

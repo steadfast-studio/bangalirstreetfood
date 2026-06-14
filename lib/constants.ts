@@ -175,6 +175,29 @@ export const memberData = [
     bio: "Sourav is a creative marketing strategist with a passion for storytelling. As the CMO, he leads our marketing efforts to connect with travelers and share the unique experiences we offer. Sourav's innovative approach to marketing helps us reach a wider audience and inspire more people to explore the world with us.",
   },
 ];
+export const homeMemberData = [
+  {
+    id: "anirban",
+    name: "Anirban Das",
+    role: "Co-Creator",
+    image: "/members/home/anirbandas.jpeg",
+    bio: "Anirban is a passionate traveler and entrepreneur with over a decade of experience in the travel industry. He co-founded our company to share his love for travel and create unforgettable experiences for others. Anirban is dedicated to curating unique and personalized travel packages that cater to every kind of traveler.",
+  },
+  {
+    id: "rohit",
+    name: "Rohit Dutta",
+    role: "Co-Creator",
+    image: "/members/home/rohitdutta.jpeg",
+    bio: "Rohit is a seasoned operations expert with a background in hospitality management. As the COO, he ensures that every aspect of our travel services runs smoothly, from logistics to customer support. Rohit's commitment to excellence and attention to detail guarantees that our customers have a seamless and enjoyable travel experience.",
+  },
+  {
+    id: "sourav",
+    name: "Sourav Sil",
+    role: "Co-Creator",
+    image: "/members/home/souravsil.jpeg",
+    bio: "Sourav is a creative marketing strategist with a passion for storytelling. As the CMO, he leads our marketing efforts to connect with travelers and share the unique experiences we offer. Sourav's innovative approach to marketing helps us reach a wider audience and inspire more people to explore the world with us.",
+  },
+];
 
 export const whyChooseUsData = [
   {
