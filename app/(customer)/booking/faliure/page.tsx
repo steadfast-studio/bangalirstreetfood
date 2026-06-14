@@ -47,7 +47,7 @@ export default function BookingFailurePage() {
                   href="mailto:support@bangalirstreetfood.com"
                   className="font-medium underline"
                 >
-                  support@bangalirstreetfood.com
+                  contact@bangalirstreetfood.com
                 </a>
               </li>
             </ul>

@@ -140,7 +140,7 @@ export default function Page() {
 
               <div className="mt-8 flex w-fit flex-col gap-3 sm:flex-row sm:gap-4">
                 <Button asChild>
-                  <Link href="/about">Read Our Full Story</Link>
+                  <Link prefetch={false} href="/about">Read Our Full Story</Link>
                 </Button>
                 <Button asChild className="bg-white" variant="outline">
                   <Link href="/package">View Packages</Link>
