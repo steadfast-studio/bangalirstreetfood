@@ -13,10 +13,9 @@ const navigationLinks = [
   { name: "Our Story", href: "/about" },
 ];
 
-// ✅ Add any route that should start transparent here
 const TRANSPARENT_NAV_ROUTES: string[] = [
   "/",
-  "/package/[id]", // dynamic segment — matched via regex below
+  "/package/[id]", 
   "/about",
   "/gallery",
   "/package",
@@ -24,7 +23,6 @@ const TRANSPARENT_NAV_ROUTES: string[] = [
 
 function isTransparentRoute(pathname: string): boolean {
   return TRANSPARENT_NAV_ROUTES.some((route) => {
-    // Convert Next.js dynamic segments like [id] → regex wildcard
     const pattern = route.replace(/\[.*?\]/g, "[^/]+");
     return new RegExp(`^${pattern}$`).test(pathname);
   });
@@ -40,17 +38,12 @@ const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   useEffect(() => {
-    if (!hasTransparentNav) return; // skip listener on solid-nav routes
+    if (!hasTransparentNav) return;
     const handleScroll = () => setScrolled(window.scrollY > 20);
     handleScroll();
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, [hasTransparentNav]);
-
-  // Reset scroll state when navigating to a non-transparent route
-  // useEffect(() => {
-  // if (!hasTransparentNav) setScrolled(false);
-  // }, [pathname, hasTransparentNav]);
 
   return (
     <header
@@ -72,7 +65,6 @@ const Navbar = () => {
           />
         </Link>
 
-        {/* Desktop Nav */}
         <nav className="hidden items-center gap-1 md:flex">
           {navigationLinks.map((link) => {
             const isActive =
@@ -108,7 +100,6 @@ const Navbar = () => {
           </Button>
         </nav>
 
-        {/* Mobile Toggle */}
         <button
           type="button"
           aria-label="Toggle menu"
@@ -153,7 +144,6 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Mobile Nav */}
       {mobileOpen && (
         <nav className="border-t border-gray-100 bg-white px-4 pt-2 pb-4 md:hidden">
           {navigationLinks.map((link) => {

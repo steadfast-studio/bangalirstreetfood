@@ -55,7 +55,7 @@ export default function Page() {
       </div>
 
       <HomeSections className="max-w-none bg-linear-to-br px-0 py-0! xl:py-0!">
-        <section className="relative overflow-hidden bg-linear-to-b from-amber-50 via-orange-50/40 to-white py-16 md:py-24 w-full">
+        <section className="relative w-full overflow-hidden bg-linear-to-b from-amber-50 via-orange-50/40 to-white py-16 md:py-24">
           {/* Decorative background elements */}
           <div className="pointer-events-none absolute inset-0 opacity-[0.04]">
             <div
@@ -73,7 +73,7 @@ export default function Page() {
             {/* Polaroid stack */}
             <div className="relative flex flex-col items-center py-8 md:py-0">
               {/* Decorative compass / stamp */}
-              <div className="absolute p-2 -top-4 right-4 hidden h-24 w-24 rotate-12 items-center justify-center rounded-full border-2 border-dashed border-amber-300 text-xs font-semibold tracking-widest text-amber-400 uppercase md:flex">
+              <div className="absolute -top-4 right-4 hidden h-24 w-24 rotate-12 items-center justify-center rounded-full border-2 border-dashed border-amber-300 p-2 text-xs font-semibold tracking-widest text-amber-400 uppercase md:flex">
                 Est. on the road
               </div>
 
@@ -193,12 +193,14 @@ export default function Page() {
         </div>
       </HomeSections>
       {/* What people say */}
-      <HomeSections>
-        <Testimonials
-          data={testimonialsData}
-          title="What Travelers Say"
-          subtitle="Real experiences from our happy customers"
-        />
+      <HomeSections className="max-w-none bg-gray-50">
+        <div className="max-w-6xl mx-auto">
+          <Testimonials
+            data={testimonialsData}
+            title="What Travelers Say"
+            subtitle="Real experiences from our happy customers"
+          />
+        </div>
       </HomeSections>
       {/* Picture Gallery */}
       <HomeSections>
