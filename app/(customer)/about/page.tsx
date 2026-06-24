@@ -11,6 +11,8 @@ import {
 } from "@/components/ui/dialog";
 import ContactForm from "@/components/forms/ContactForm";
 
+export const dynamic = "force-static";
+
 const TeamMemberCard = ({
   name,
   role,
