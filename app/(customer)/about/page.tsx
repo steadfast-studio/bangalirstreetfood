@@ -102,7 +102,7 @@ const AboutPage = () => {
             </div>
             <div className="absolute right-0 bottom-5 z-20 h-[60%] w-[62%] overflow-hidden shadow-lg">
               <Image
-                src="/gallery/bsf2.jpeg"
+                src="/gallery/bsf2.webp"
                 alt="Traveler on mountain"
                 fill
                 className="object-cover"
