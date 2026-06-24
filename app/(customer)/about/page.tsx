@@ -94,7 +94,7 @@ const AboutPage = () => {
             <div className="bg-primary/10 absolute right-5 -bottom-1.5 h-[60%] w-[63%]" />
             <div className="absolute top-0 left-0 z-10 h-[55%] w-[70%] overflow-hidden shadow-md">
               <Image
-                src="/gallery/bsf1.jpeg"
+                src="/gallery/bsf1.webp"
                 alt="Travel gear"
                 fill
                 className="object-cover"
