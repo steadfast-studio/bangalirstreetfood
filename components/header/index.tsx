@@ -62,6 +62,7 @@ const Navbar = () => {
             width={80}
             height={80}
             fetchPriority="high"
+            loading="eager"
             className="my-1 h-16 w-full object-cover"
           />
         </Link>
