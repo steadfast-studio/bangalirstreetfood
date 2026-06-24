@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
+import { FaArrowRight } from "react-icons/fa";
 
 const navigationLinks = [
   { name: "Home", href: "/" },
@@ -15,7 +16,7 @@ const navigationLinks = [
 
 const TRANSPARENT_NAV_ROUTES: string[] = [
   "/",
-  "/package/[id]", 
+  "/package/[id]",
   "/about",
   "/gallery",
   "/package",
@@ -95,9 +96,10 @@ const Navbar = () => {
             );
           })}
 
-          <Button asChild size="sm" className="ml-3" variant="accent">
+          <Button asChild size="sm" className="group ml-3" variant="accent">
             <Link href="/package" className="font-semibold">
-              Book a Trip
+              <span className="">Book a Trip</span>
+              <FaArrowRight className="ml-1 inline-block rounded-full bg-black p-1 font-semibold text-white transition-transform group-hover:translate-x-0.5" />
             </Link>
           </Button>
         </nav>
