@@ -1,17 +1,17 @@
 import Image from "next/image";
 import { StatItem, WhyBestFeature, memberData } from "@/lib/constants";
 import HomeSections from "@/components/reusable/HomeSections";
-import { Button } from "@/components/ui/button";
 import WavyHero from "@/components/WavyHero";
 import {
   Dialog,
   DialogContent,
   DialogDescription,
   DialogHeader,
-  DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
 import ContactForm from "@/components/forms/ContactForm";
+
+export const dynamic = "force-static";
 
 const TeamMemberCard = ({
   name,

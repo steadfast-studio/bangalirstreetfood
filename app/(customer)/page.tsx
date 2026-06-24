@@ -24,37 +24,32 @@ import {
 import ContactForm from "@/components/forms/ContactForm";
 import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
 
-export const dynamic = 'force-static';
-
+export const dynamic = "force-static";
 
 export default function Page() {
   return (
     //hero
     <div className="mx-auto w-full overflow-x-hidden">
       {/* hero section */}
-      <div className="hidden lg:block">
-        <HeroVideo />
-      </div>
-      {/* Tablet image — shown only on tablet */}
-      <div className="hidden h-full w-full overflow-hidden md:block lg:hidden">
-        <Image
-          src="/hero/tab.png"
-          alt="App Preview Tablet"
-          width={500}
-          height={1000}
-          className="h-full w-full object-cover"
-        />
-      </div>
-      {/* Mobile image — shown only on mobile */}
-      <div className="block h-full w-full overflow-hidden md:hidden">
-        <Image
-          src="/hero/mobile.png"
-          alt="App Preview Mobile"
-          width={500}
-          height={1000}
-          className="h-full w-full object-cover"
-        />
-      </div>
+      {
+        // desktop
+        <HeroVideo className="hidden lg:block" />
+      }
+
+      {
+        // tablet/mobile
+        <picture>
+          <source media="(min-width:768px)" srcSet="/hero/tab.png" />
+
+          <img
+            src="/hero/mobile.png"
+            alt="App Preview Mobile"
+            className="h-full w-full object-cover lg:hidden"
+            fetchPriority="high"
+            loading="eager"
+          />
+        </picture>
+      }
 
       <HomeSections className="max-w-none bg-linear-to-br px-0 py-0! xl:py-0!">
         <section className="relative w-full overflow-hidden bg-linear-to-b from-amber-50 via-orange-50/40 to-white py-16 md:py-24">
