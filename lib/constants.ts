@@ -114,14 +114,14 @@ export const videos: { src: string; type: "youtube" | "facebook" }[] = [
 ];
 
 export const images = [
-  "/gallery/bsf1.jpeg",
-  "/gallery/bsf2.jpeg",
-  "/gallery/bsf3.jpeg",
-  "/gallery/bsf4.jpeg",
-  "/gallery/bsf5.jpeg",
-  "/gallery/bsf6.jpeg",
-  "/gallery/bsf7.jpeg",
-  "/gallery/bsf8.jpeg",
+  "/gallery/bsf1.webp",
+  "/gallery/bsf2.webp",
+  "/gallery/bsf3.webp",
+  "/gallery/bsf4.webp",
+  "/gallery/bsf5.webp",
+  "/gallery/bsf6.webp",
+  "/gallery/bsf7.webp",
+  "/gallery/bsf8.webp",
 ];
 
 export const faqData = [

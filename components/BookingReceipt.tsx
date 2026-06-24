@@ -6,6 +6,7 @@ import { Button } from "./ui/button";
 import Link from "next/link";
 import { Info, Copy, Check } from "lucide-react";
 import { useState } from "react";
+import { socialMediaLinks } from "@/lib/constants";
 
 export const metaData = {
   title: "Booking Receipt - Bangalir Street Food",
@@ -271,8 +272,8 @@ const BookingReceipt = ({
 
         <p className="text-center text-sm font-semibold text-red-500 print:hidden">
           If you face any issues, please contact us at{" "}
-          <a href="tel:+919876543210" className="underline">
-            +91 98765 43210
+          <a href={`tel:${socialMediaLinks.whatsapp.number}`} className="underline">
+            {socialMediaLinks.whatsapp.number}
           </a>
         </p>
       </CardContent>

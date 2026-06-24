@@ -263,6 +263,8 @@ export default function Page() {
             alt="Bangalir Street Food Logo"
             width={200}
             height={200}
+            fetchPriority="high"
+            quality={100} 
             className="m-4 rounded-full object-cover sm:mx-0 md:w-1/2 lg:px-16"
           />
           <div className="w-full p-4 md:w-1/2 lg:px-16">
