@@ -1,9 +1,9 @@
-export default function HeroVideo() {
+export default function HeroVideo({className}: {className?: string}) {
   return (
     <video
       width={1920}
       height={1080}
-      className="block h-auto w-full object-contain will-change-transform"
+      className={`block h-auto w-full object-contain will-change-transform ${className || ''}`}
       autoPlay
       loop
       muted

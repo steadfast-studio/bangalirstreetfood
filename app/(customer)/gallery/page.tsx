@@ -13,6 +13,8 @@ type GalleryImageData = {
   tags: "kashmir" | "andaman" | "vizag" | "misc";
 };
 
+export const dynamic = "force-static";
+
 // sample images for travel
 const galleryImages: GalleryImageData[] = [
   {
