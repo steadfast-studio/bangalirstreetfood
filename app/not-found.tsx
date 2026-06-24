@@ -25,7 +25,7 @@ export default function NotFound() {
   });
 
   return (
-    <div className="flex min-h-[100vh] flex-col items-center justify-center bg-[url(/bg404.png)] bg-cover bg-center px-6 text-center">
+    <div className="flex min-h-[100vh] flex-col items-center justify-center bg-[url(/bg404.webp)] bg-cover bg-center px-6 text-center">
       {/* Spiral Sun */}
       <svg
         width="148"

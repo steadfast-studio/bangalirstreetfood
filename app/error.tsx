@@ -30,7 +30,7 @@ export default function Error({
   });
 
   return (
-    <div className="flex min-h-[100vh] flex-col items-center justify-center bg-[url(/error.png)] bg-cover bg-center px-6 text-center">
+    <div className="flex min-h-[100vh] flex-col items-center justify-center bg-[url(/error.webp)] bg-cover bg-center px-6 text-center">
       {/* Same Spiral Sun */}
       <svg
         width="148"

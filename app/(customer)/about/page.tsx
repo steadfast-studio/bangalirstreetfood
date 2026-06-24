@@ -52,7 +52,7 @@ const AboutPage = () => {
         subtitle=""
         description="Discover the passion and dedication behind our travel agency,
             committed to making your journeys unforgettable."
-        bgImage="/banners/about.jpg"
+        bgImage="/banners/about.webp"
       />
 
       {/* Why We Are The Best */}
@@ -176,7 +176,7 @@ const AboutPage = () => {
       <div className="p-4">
         <section
           className="relative mx-auto mt-10 mb-10 max-w-6xl overflow-hidden rounded-2xl bg-cover bg-center text-center text-white sm:mt-12"
-          style={{ backgroundImage: "url('/pahar.jpeg')" }}
+          style={{ backgroundImage: "url('/pahar.webp')" }}
         >
           <div className="absolute inset-0 bg-black/60" />
           <div className="relative z-1 flex h-full w-full flex-col items-center p-16 px-6 backdrop-blur-xs xl:p-32">
