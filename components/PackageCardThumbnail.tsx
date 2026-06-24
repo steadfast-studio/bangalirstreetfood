@@ -18,7 +18,7 @@ const PackageCardThumbnail = ({
     <div className="relative aspect-2/3 w-full">
       {isLoading && <Skeleton className="absolute inset-0 h-full w-full" />}
       <Image
-        src={thumbnail || "/pahar.jpeg"}
+        src={thumbnail || "/pahar.webp"}
         alt={title}
         fill
         loading={priority ? "eager" : "lazy"}

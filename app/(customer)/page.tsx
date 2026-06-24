@@ -35,7 +35,7 @@ export default function Page() {
       {/* Tablet image — shown only on tablet */}
       <div className="hidden h-full w-full overflow-hidden md:block lg:hidden">
         <Image
-          src="/hero/tab.png"
+          src="/hero/tab.webp"
           alt="App Preview Tablet"
           width={500}
           height={1000}
@@ -45,7 +45,7 @@ export default function Page() {
       {/* Mobile image — shown only on mobile */}
       <div className="block h-full w-full overflow-hidden md:hidden">
         <Image
-          src="/hero/mobile.png"
+          src="/hero/mobile.webp"
           alt="App Preview Mobile"
           width={500}
           height={1000}
@@ -251,7 +251,7 @@ export default function Page() {
       {/* CTA section */}
       <section
         className="relative mx-auto mb-32 max-w-6xl overflow-hidden rounded-lg bg-cover bg-center text-center text-white"
-        style={{ backgroundImage: "url('/pahar.jpeg')" }}
+        style={{ backgroundImage: "url('/pahar.webp')" }}
       >
         <div className="absolute inset-0 bg-black/60" />
         <div className="relative z-1 flex h-full w-full flex-col items-center justify-center p-4 backdrop-blur-xs md:flex-row">

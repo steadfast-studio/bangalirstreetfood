@@ -157,7 +157,7 @@ const GalleryPage = () => {
         subtitle=""
         description="Explore our vibrant gallery showcasing the essence of Bangalir Street
           Food."
-        bgImage="/pahar.jpeg"
+        bgImage="/pahar.webp"
       />
 
       <div className="mx-auto mt-16 max-w-6xl px-4 py-8">
@@ -174,6 +174,7 @@ const GalleryPage = () => {
                 alt={image.name}
                 width={400}
                 height={300}
+                quality={100}
                 className="h-56 w-full object-cover brightness-95 contrast-95 sepia-[0.2]"
               />
               <p className="font-handwriting mt-3 text-center text-xl font-bold text-gray-800">
