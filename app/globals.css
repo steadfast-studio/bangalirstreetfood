@@ -245,7 +245,6 @@ body::-webkit-scrollbar {
 /* * HERO WAVY MASK */
 
 .hero-mask-intersect {
-  /* @apply relative mx-auto mb-10 flex min-h-120 items-center px-6 py-16 sm:px-10 lg:min-h-125; */
   background-size: cover;
   background-position: top;
   overflow: hidden;
