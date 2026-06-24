@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useRef } from "react";
+import { useRef } from "react";
 import { Button } from "./ui/button";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import SocialVideoCard from "./SocialVideoCard";
@@ -42,7 +42,7 @@ const SocialMediaCarousel = ({
           size="icon-3xl"
           className="absolute top-1/2 -left-6 aspect-square -translate-y-1/2 rounded-full shadow"
           onClick={handlePrev}
-          // variant=""
+          aria-label="Previous Reel"
           disabled={videos.length <= 1}
         >
           <ArrowLeft className="h-12 w-12" strokeWidth={4} />
@@ -52,7 +52,7 @@ const SocialMediaCarousel = ({
           size="icon-3xl"
           className="absolute top-1/2 -right-6 aspect-square -translate-y-1/2 rounded-full shadow"
           onClick={handleNext}
-          // variant="secondary"
+          aria-label="Next Reel"
           disabled={videos.length <= 1}
         >
           <ArrowRight className="h-12 w-12" strokeWidth={4} />

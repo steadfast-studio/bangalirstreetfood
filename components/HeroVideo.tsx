@@ -9,7 +9,7 @@ export default function HeroVideo() {
       muted
       playsInline
       preload="metadata"
-      poster="/hero/desktop.png"
+      poster="/hero/desktop.png" 
     >
       <source src="/hero/hero.mp4" />
     </video>

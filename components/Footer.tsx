@@ -1,3 +1,4 @@
+import { socialMediaLinks } from "@/lib/constants";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -51,14 +52,14 @@ const Footer = () => {
               Contact
             </h4>
             <p className="mt-3 wrap-break-word">
-              <strong>Email:</strong> contact@bangalirstreetfood.com
+              <strong>Email:</strong> {socialMediaLinks.email.zoho}
             </p>
             <p className="text-sm leading-6">
-              <strong>Phone:</strong> +91 9064351230
+              <strong>Phone:</strong> {socialMediaLinks.whatsapp.number}
             </p>
             <div className="flex items-center justify-center gap-4 p-2 sm:justify-start">
               <Link
-                href={"https://www.facebook.com/@bangalirstreetfood"}
+                href={socialMediaLinks.facebook.href}
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -71,7 +72,7 @@ const Footer = () => {
                 />
               </Link>
               <Link
-                href={"https://youtube.com/@bangalirstreetfood1198"}
+                href={socialMediaLinks.youtube.href}
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -84,7 +85,7 @@ const Footer = () => {
                 />
               </Link>
               <Link
-                href={"https://www.instagram.com/bangalirstreetfood/"}
+                href={socialMediaLinks.instagram.href}
                 target="_blank"
                 rel="noopener noreferrer"
               >

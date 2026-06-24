@@ -226,4 +226,12 @@ export const whyChooseUsData = [
   },
 ];
 
+export const socialMediaLinks = {
+  facebook: { href: "https://www.facebook.com/@bangalirstreetfood" },
+  instagram: { href: "https://www.instagram.com/bangalirstreetfood/" },
+  youtube: { href: "https://youtube.com/@bangalirstreetfood1198" },
+  whatsapp: { number: "+919064351230" },
+  email: { zoho: "contact@bangalirstreetfood.com"}
+};
+
 // ! add social media links, phone number, emails etc here @kankanmondal22
