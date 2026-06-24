@@ -18,7 +18,6 @@ import {
   videos,
   images,
   faqData,
-  memberData,
   whyChooseUsData,
   homeMemberData,
 } from "@/lib/constants";
@@ -107,9 +106,6 @@ export default function Page() {
                         alt={member.name}
                         className="aspect-3/2 w-56 object-cover sm:w-64 md:w-72"
                       />
-                      <p className="font-handwriting mt-3 text-center text-xl font-bold text-gray-800">
-                        {member.name}
-                      </p>
                       {/* Tape accent */}
                       <span className="absolute -top-3 left-1/2 h-6 w-16 -translate-x-1/2 -rotate-2 bg-amber-100/80 shadow-sm" />
                     </div>
@@ -140,7 +136,9 @@ export default function Page() {
 
               <div className="mt-8 flex w-fit flex-col gap-3 sm:flex-row sm:gap-4">
                 <Button asChild>
-                  <Link prefetch={false} href="/about">Read Our Full Story</Link>
+                  <Link prefetch={false} href="/about">
+                    Read Our Full Story
+                  </Link>
                 </Button>
                 <Button asChild className="bg-white" variant="outline">
                   <Link href="/package">View Packages</Link>
@@ -194,7 +192,7 @@ export default function Page() {
       </HomeSections>
       {/* What people say */}
       <HomeSections className="max-w-none bg-gray-50">
-        <div className="max-w-6xl mx-auto">
+        <div className="mx-auto max-w-6xl">
           <Testimonials
             data={testimonialsData}
             title="What Travelers Say"

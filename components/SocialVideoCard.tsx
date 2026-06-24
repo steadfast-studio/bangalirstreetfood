@@ -80,7 +80,7 @@ const SocialVideoCard = ({ src, index, type }: Props) => {
     <article className="w-[82vw] max-w-[320px] shrink-0 snap-start overflow-hidden rounded-xl border border-red-100 bg-white shadow-sm sm:w-[320px]">
       {embedUrl ? (
         <iframe
-          className="h-96 w-full bg-black sm:h-125"
+          className="h-96 w-full bg-black sm:h-142"
           src={embedUrl}
           title={`Social video ${index + 1}`}
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -88,7 +88,7 @@ const SocialVideoCard = ({ src, index, type }: Props) => {
         />
       ) : (
         <video
-          className="h-96 w-full object-cover sm:h-125"
+          className="h-96 w-full object-cover sm:h-142"
           src={src}
           controls
         />
