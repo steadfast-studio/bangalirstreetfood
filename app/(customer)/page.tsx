@@ -2,7 +2,7 @@ import GalleryGrid from "@/components/GalleryGrid";
 import HeroVideo from "@/components/HeroVideo";
 import Heading2 from "@/components/reusable/Heading2";
 import HomeSections from "@/components/reusable/HomeSections";
-import SocialMediaCarousel from "@/components/SocialMediaCarousel";
+// import SocialMediaCarousel from "@/components/SocialMediaCarousel";
 import Testimonials from "@/components/Testimonials";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
@@ -15,7 +15,6 @@ import {
 } from "@/components/ui/accordion";
 import {
   testimonialsData,
-  videos,
   images,
   faqData,
   whyChooseUsData,
@@ -104,7 +103,7 @@ export default function Page() {
                     >
                       <Image
                         src={member.image}
-                        height={300}
+                        height={200}
                         width={300}
                         alt={member.name}
                         className="aspect-3/2 w-56 object-cover sm:w-64 md:w-72"
@@ -154,11 +153,11 @@ export default function Page() {
       {/* The Stories we created*/}
       <HomeSections className="max-w-none">
         <div className="mx-auto max-w-6xl p-8">
-          <SocialMediaCarousel
+          {/* <SocialMediaCarousel
             videos={videos}
             title="See It Before You Book It"
             subtitle="We've actually been there. Watch our vlogs from Kashmir, Andaman, and Vizag — and imagine yourself in the frame."
-          />
+          /> */}
           <p className="mt-8 flex flex-wrap items-center justify-center gap-y-1 text-lg">
             Follow Us on
             <span className="flex items-center">
