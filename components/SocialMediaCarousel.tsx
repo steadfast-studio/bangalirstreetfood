@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef } from "react";
+import { Suspense, useRef } from "react";
 import { Button } from "./ui/button";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import SocialVideoCard from "./SocialVideoCard";
@@ -59,20 +59,29 @@ const SocialMediaCarousel = ({
         </Button>
         <div
           ref={trackRef}
-          className="flex snap-x gap-4 overflow-x-auto pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+          className="flex snap-x [scrollbar-width:none] gap-4 overflow-x-auto pb-2 [&::-webkit-scrollbar]:hidden"
         >
           {videos.map((video, index) => (
-            <SocialVideoCard
-              key={index}
-              src={video.src}
-              type={video.type}
-              index={index}
-            />
+            <Suspense key={index} fallback={<VideoCardSkeleton />}>
+              <SocialVideoCard
+                src={video.src}
+                type={video.type}
+                index={index}
+              />
+            </Suspense>
           ))}
         </div>
       </div>
     </>
   );
 };
+
+const VideoCardSkeleton = () => {
+  return (
+    <div className="h-96 w-[82vw] max-w-[320px] shrink-0 snap-start overflow-hidden rounded-xl border border-red-100 bg-white shadow-sm sm:w-[320px]">
+      <div className="h-full w-full animate-pulse bg-gray-200" />
+    </div>
+  );
+}
 
 export default SocialMediaCarousel;

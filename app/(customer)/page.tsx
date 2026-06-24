@@ -24,6 +24,9 @@ import {
 import ContactForm from "@/components/forms/ContactForm";
 import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
 
+export const dynamic = 'force-static';
+
+
 export default function Page() {
   return (
     //hero
