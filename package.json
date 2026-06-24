@@ -64,5 +64,8 @@
     "tailwindcss": "^4.2.2",
     "tsx": "^4.21.0",
     "typescript": "^5.9.3"
+  },
+  "overrides": {
+    "kysely" : "0.28.17"
   }
 }
