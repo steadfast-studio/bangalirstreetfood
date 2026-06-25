@@ -2,8 +2,9 @@
 
 import { useMemo, useState } from "react";
 import Image from "next/image";
-import ImageLightbox from "@/components/ImageLightbox";
+// import ImageLightbox from "@/components/ImageLightbox";
 import WavyHero from "@/components/WavyHero";
+import LightboxImage from "@/components/LightboxImage";
 
 type GalleryImageData = {
   id: string;
@@ -161,7 +162,7 @@ const GalleryPage = () => {
               key={image.id}
               type="button"
               onClick={() => setSelectedIndex(index)}
-              className={`${rotations[index % rotations.length]} bg-white p-3 pb-6 shadow transition-all duration-300 hover:rotate-0 hover:shadow-xl`}
+              className={`${rotations[index % rotations.length]} bg-white rounded-lg p-3 pb-6 shadow transition-all duration-300 hover:rotate-0 hover:shadow-xl`}
             >
               <Image
                 src={image.src}
@@ -178,7 +179,13 @@ const GalleryPage = () => {
           ))}
         </div>
 
-        <ImageLightbox
+        {/* <ImageLightbox
+          images={lightboxImages}
+          isOpen={selectedIndex !== null}
+          initialIndex={selectedIndex ?? 0}
+          onClose={() => setSelectedIndex(null)}
+        /> */}
+        <LightboxImage
           images={lightboxImages}
           isOpen={selectedIndex !== null}
           initialIndex={selectedIndex ?? 0}

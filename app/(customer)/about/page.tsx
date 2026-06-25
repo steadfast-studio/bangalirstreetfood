@@ -1,14 +1,12 @@
 import Image from "next/image";
 import { StatItem, WhyBestFeature, memberData } from "@/lib/constants";
 import HomeSections from "@/components/reusable/HomeSections";
-import { Button } from "@/components/ui/button";
 import WavyHero from "@/components/WavyHero";
 import {
   Dialog,
   DialogContent,
   DialogDescription,
   DialogHeader,
-  DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
 import ContactForm from "@/components/forms/ContactForm";
@@ -97,6 +95,8 @@ const AboutPage = () => {
                 src="/gallery/bsf1.webp"
                 alt="Travel gear"
                 fill
+                quality={60}
+                sizes="(max-width: 768px) 100vw, 38vw"
                 className="object-cover"
               />
             </div>
@@ -105,6 +105,8 @@ const AboutPage = () => {
                 src="/gallery/bsf2.webp"
                 alt="Traveler on mountain"
                 fill
+                quality={60}
+                sizes="(max-width: 768px) 100vw, 38vw"
                 className="object-cover"
               />
             </div>

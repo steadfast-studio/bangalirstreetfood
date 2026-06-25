@@ -55,7 +55,7 @@ const BookingReceipt = ({
   };
 
   return (
-    <Card className="w-full max-w-2xl bg-white shadow-lg print:border-2 print:shadow-none">
+    <Card className="w-full max-w-2xl bg-white shadow-lg print:border-2 print:shadow-none mt-16">
       {/* Success Header */}
       <CardHeader className="pb-2 text-center">
         <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-green-100 print:bg-green-200">

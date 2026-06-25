@@ -111,12 +111,9 @@ export default function ImageLightbox({
         className="relative w-full max-w-3xl"
         onClick={(e) => e.stopPropagation()}
       >
-        {/* Stacked layers (no rotation) */}
-        <div className="absolute inset-0 translate-x-2 translate-y-2 bg-white opacity-60 shadow-lg" />
-        <div className="absolute inset-0 translate-x-4 translate-y-4 bg-white opacity-40 shadow-md" />
 
         {/* Main Polaroid */}
-        <div className="relative animate-[zoomIn_0.3s_ease] bg-white p-4 pb-8 shadow-2xl">
+        <div className="relative animate-[zoomIn_0.3s_ease] bg-white rounded-lg p-4 pb-8 shadow-2xl">
           <div className="relative h-[45vh] w-full overflow-hidden bg-black sm:h-[60vh]">
             <Image
               key={currentImage.src}
