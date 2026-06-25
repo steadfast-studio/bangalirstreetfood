@@ -57,10 +57,12 @@ const Navbar = () => {
         {/* Logo */}
         <Link href="/" className="shrink-0">
           <Image
-            src="/logo.png"
+            src="/logo_80x80.png"
             alt="Logo"
-            width={200}
-            height={100}
+            width={80}
+            height={80}
+            fetchPriority="high"
+            loading="eager"
             className="my-1 h-16 w-full object-cover"
           />
         </Link>

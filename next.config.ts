@@ -13,6 +13,7 @@ const nextConfig: NextConfig = {
     ],
   },
   reactStrictMode: false,
+  // cacheComponents: true,
 };
 
 export default nextConfig;

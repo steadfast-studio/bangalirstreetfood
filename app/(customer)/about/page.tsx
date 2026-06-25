@@ -1,14 +1,12 @@
 import Image from "next/image";
 import { StatItem, WhyBestFeature, memberData } from "@/lib/constants";
 import HomeSections from "@/components/reusable/HomeSections";
-import { Button } from "@/components/ui/button";
 import WavyHero from "@/components/WavyHero";
 import {
   Dialog,
   DialogContent,
   DialogDescription,
   DialogHeader,
-  DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
 import ContactForm from "@/components/forms/ContactForm";
@@ -52,7 +50,7 @@ const AboutPage = () => {
         subtitle=""
         description="Discover the passion and dedication behind our travel agency,
             committed to making your journeys unforgettable."
-        bgImage="/banners/about.jpg"
+        bgImage="/banners/about.webp"
       />
 
       {/* Why We Are The Best */}
@@ -94,17 +92,21 @@ const AboutPage = () => {
             <div className="bg-primary/10 absolute right-5 -bottom-1.5 h-[60%] w-[63%]" />
             <div className="absolute top-0 left-0 z-10 h-[55%] w-[70%] overflow-hidden shadow-md">
               <Image
-                src="/gallery/bsf1.jpeg"
+                src="/gallery/bsf1.webp"
                 alt="Travel gear"
                 fill
+                quality={60}
+                sizes="(max-width: 768px) 100vw, 38vw"
                 className="object-cover"
               />
             </div>
             <div className="absolute right-0 bottom-5 z-20 h-[60%] w-[62%] overflow-hidden shadow-lg">
               <Image
-                src="/gallery/bsf2.jpeg"
+                src="/gallery/bsf2.webp"
                 alt="Traveler on mountain"
                 fill
+                quality={60}
+                sizes="(max-width: 768px) 100vw, 38vw"
                 className="object-cover"
               />
             </div>
@@ -176,7 +178,7 @@ const AboutPage = () => {
       <div className="p-4">
         <section
           className="relative mx-auto mt-10 mb-10 max-w-6xl overflow-hidden rounded-2xl bg-cover bg-center text-center text-white sm:mt-12"
-          style={{ backgroundImage: "url('/pahar.jpeg')" }}
+          style={{ backgroundImage: "url('/pahar.webp')" }}
         >
           <div className="absolute inset-0 bg-black/60" />
           <div className="relative z-1 flex h-full w-full flex-col items-center p-16 px-6 backdrop-blur-xs xl:p-32">

@@ -2,8 +2,9 @@
 
 import { useMemo, useState } from "react";
 import Image from "next/image";
-import ImageLightbox from "@/components/ImageLightbox";
+// import ImageLightbox from "@/components/ImageLightbox";
 import WavyHero from "@/components/WavyHero";
+import LightboxImage from "@/components/LightboxImage";
 
 type GalleryImageData = {
   id: string;
@@ -16,121 +17,115 @@ type GalleryImageData = {
 const galleryImages: GalleryImageData[] = [
   {
     id: "1",
-    src: "/gallery/bsf1.jpeg",
+    src: "/gallery/bsf1.webp",
     name: "Aaru Valley Pahalgam",
     tags: "kashmir",
   },
   {
     id: "2",
-    src: "/gallery/bsf2.jpeg",
+    src: "/gallery/bsf2.webp",
     name: "Beside Lidder River",
     tags: "kashmir",
   },
   {
     id: "3",
-    src: "/gallery/bsf3.jpeg",
+    src: "/gallery/bsf3.webp",
     name: "Lal chawk of Srinagar",
     tags: "misc",
   },
   {
     id: "4",
-    src: "/gallery/bsf4.jpeg",
+    src: "/gallery/bsf4.webp",
     name: "Hourse Riding at Pahalgam",
     tags: "misc",
   },
   {
     id: "5",
-    src: "/gallery/bsf5.jpeg",
+    src: "/gallery/bsf5.webp",
     name: "Tulip garden of Srinagar",
     tags: "misc",
   },
   {
     id: "6",
-    src: "/gallery/bsf6.jpeg",
+    src: "/gallery/bsf6.webp",
     name: "Way to Srinagar",
     tags: "misc",
   },
   {
     id: "7",
-    src: "/gallery/bsf7.jpeg",
+    src: "/gallery/bsf7.webp",
     name: "Sikara Ride at Dal Lake",
     tags: "kashmir",
   },
   {
     id: "8",
-    src: "/gallery/bsf8.jpeg",
+    src: "/gallery/bsf8.webp",
     name: "Tulip Garden of Srinagar",
     tags: "misc",
   },
   {
     id: "9",
-    src: "/gallery/bsf9.jpeg",
+    src: "/gallery/bsf9.webp",
     name: "Sonamarg Tunnel",
     tags: "misc",
   },
   {
     id: "10",
-    src: "/gallery/bsf10.jpeg",
+    src: "/gallery/bsf10.webp",
     name: "Sonamarg",
     tags: "misc",
   },
   {
-    id: "11",
-    src: "/gallery/bsf11.jpeg",
-    name: "On the way to Katra",
-    tags: "misc",
-  },
-  {
     id: "12",
-    src: "/gallery/bsf12.jpeg",
+    src: "/gallery/bsf12.webp",
     name: "With American Biriyani Dada",
     tags: "misc",
   },
   {
     id: "13",
-    src: "/gallery/bsf13.jpeg",
+    src: "/gallery/bsf13.webp",
     name: "With Happy Customers",
     tags: "misc",
   },
   {
     id: "14",
-    src: "/gallery/bsf14.jpeg",
+    src: "/gallery/bsf14.webp",
     name: "Vizag Rishikonda Beach",
     tags: "misc",
   },
   {
     id: "15",
-    src: "/gallery/bsf15.jpeg",
+    src: "/gallery/bsf15.webp",
     name: "Vizag Yarada Beach",
     tags: "misc",
   },
   {
     id: "16",
-    src: "/gallery/bsf16.jpeg",
+    src: "/gallery/bsf16.webp",
     name: "Chandanwari",
     tags: "misc",
   },
   {
     id: "17",
-    src: "/gallery/bsf17.jpeg",
+    src: "/gallery/bsf17.webp",
     name: "Aaru Valley Pahalgam",
     tags: "misc",
   },
   {
     id: "18",
-    src: "/gallery/bsf18.jpeg",
+    src: "/gallery/bsf18.webp",
     name: "Meena Bazar Dal lake",
     tags: "misc",
   },
   {
     id: "19",
-    src: "/gallery/bsf19.jpeg",
+    src: "/gallery/bsf19.webp",
     name: "Gulmarg",
     tags: "misc",
   },
   {
     id: "20",
-    src: "/gallery/bsf20.jpeg",
+    src: "/gallery/bsf20.webp",
     name: "Gulmarg Gondola Ride",
     tags: "misc",
   },
@@ -157,7 +152,7 @@ const GalleryPage = () => {
         subtitle=""
         description="Explore our vibrant gallery showcasing the essence of Bangalir Street
           Food."
-        bgImage="/pahar.jpeg"
+        bgImage="/pahar.webp"
       />
 
       <div className="mx-auto mt-16 max-w-6xl px-4 py-8">
@@ -167,13 +162,14 @@ const GalleryPage = () => {
               key={image.id}
               type="button"
               onClick={() => setSelectedIndex(index)}
-              className={`${rotations[index % rotations.length]} bg-white p-3 pb-6 shadow transition-all duration-300 hover:rotate-0 hover:shadow-xl`}
+              className={`${rotations[index % rotations.length]} bg-white rounded-lg p-3 pb-6 shadow transition-all duration-300 hover:rotate-0 hover:shadow-xl`}
             >
               <Image
                 src={image.src}
                 alt={image.name}
                 width={400}
                 height={300}
+                quality={100}
                 className="h-56 w-full object-cover brightness-95 contrast-95 sepia-[0.2]"
               />
               <p className="font-handwriting mt-3 text-center text-xl font-bold text-gray-800">
@@ -183,7 +179,13 @@ const GalleryPage = () => {
           ))}
         </div>
 
-        <ImageLightbox
+        {/* <ImageLightbox
+          images={lightboxImages}
+          isOpen={selectedIndex !== null}
+          initialIndex={selectedIndex ?? 0}
+          onClose={() => setSelectedIndex(null)}
+        /> */}
+        <LightboxImage
           images={lightboxImages}
           isOpen={selectedIndex !== null}
           initialIndex={selectedIndex ?? 0}

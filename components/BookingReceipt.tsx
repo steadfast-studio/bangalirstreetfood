@@ -6,6 +6,7 @@ import { Button } from "./ui/button";
 import Link from "next/link";
 import { Info, Copy, Check } from "lucide-react";
 import { useState } from "react";
+import { socialMediaLinks } from "@/lib/constants";
 
 export const metaData = {
   title: "Booking Receipt - Bangalir Street Food",
@@ -54,7 +55,7 @@ const BookingReceipt = ({
   };
 
   return (
-    <Card className="w-full max-w-2xl bg-white shadow-lg print:border-2 print:shadow-none">
+    <Card className="w-full max-w-2xl bg-white shadow-lg print:border-2 print:shadow-none mt-16">
       {/* Success Header */}
       <CardHeader className="pb-2 text-center">
         <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-green-100 print:bg-green-200">
@@ -271,8 +272,8 @@ const BookingReceipt = ({
 
         <p className="text-center text-sm font-semibold text-red-500 print:hidden">
           If you face any issues, please contact us at{" "}
-          <a href="tel:+919876543210" className="underline">
-            +91 98765 43210
+          <a href={`tel:${socialMediaLinks.whatsapp.number}`} className="underline">
+            {socialMediaLinks.whatsapp.number}
           </a>
         </p>
       </CardContent>

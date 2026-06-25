@@ -32,7 +32,7 @@ const BookPackage = async ({
       <div className="mx-auto">
         <div className="relative">
           <Image
-            src={"/pahar.jpeg"}
+            src={"/pahar.webp"}
             alt="Package Image"
             width={1500}
             height={1500}

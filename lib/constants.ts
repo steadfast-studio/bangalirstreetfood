@@ -114,14 +114,14 @@ export const videos: { src: string; type: "youtube" | "facebook" }[] = [
 ];
 
 export const images = [
-  "/gallery/bsf1.jpeg",
-  "/gallery/bsf2.jpeg",
-  "/gallery/bsf3.jpeg",
-  "/gallery/bsf4.jpeg",
-  "/gallery/bsf5.jpeg",
-  "/gallery/bsf6.jpeg",
-  "/gallery/bsf7.jpeg",
-  "/gallery/bsf8.jpeg",
+  "/gallery/bsf1.webp",
+  "/gallery/bsf2.webp",
+  "/gallery/bsf3.webp",
+  "/gallery/bsf4.webp",
+  "/gallery/bsf5.webp",
+  "/gallery/bsf6.webp",
+  "/gallery/bsf7.webp",
+  "/gallery/bsf8.webp",
 ];
 
 export const faqData = [
@@ -157,21 +157,21 @@ export const memberData = [
     id: "anirban",
     name: "Anirban Das",
     role: "Co-Creator",
-    image: "/members/anirbandas.jpeg",
+    image: "/members/anirbandas.webp",
     bio: "Anirban is a passionate traveler and entrepreneur with over a decade of experience in the travel industry. He co-founded our company to share his love for travel and create unforgettable experiences for others. Anirban is dedicated to curating unique and personalized travel packages that cater to every kind of traveler.",
   },
   {
     id: "rohit",
     name: "Rohit Dutta",
     role: "Co-Creator",
-    image: "/members/rohitdutta.jpeg",
+    image: "/members/rohitdutta.webp",
     bio: "Rohit is a seasoned operations expert with a background in hospitality management. As the COO, he ensures that every aspect of our travel services runs smoothly, from logistics to customer support. Rohit's commitment to excellence and attention to detail guarantees that our customers have a seamless and enjoyable travel experience.",
   },
   {
     id: "sourav",
     name: "Sourav Sil",
     role: "Co-Creator",
-    image: "/members/souravsil.jpeg",
+    image: "/members/souravsil.webp",
     bio: "Sourav is a creative marketing strategist with a passion for storytelling. As the CMO, he leads our marketing efforts to connect with travelers and share the unique experiences we offer. Sourav's innovative approach to marketing helps us reach a wider audience and inspire more people to explore the world with us.",
   },
 ];
@@ -180,21 +180,21 @@ export const homeMemberData = [
     id: "anirban",
     name: "Anirban Das",
     role: "Co-Creator",
-    image: "/members/home/anirbandas.jpg",
+    image: "/members/home/anirbandas.webp",
     bio: "Anirban is a passionate traveler and entrepreneur with over a decade of experience in the travel industry. He co-founded our company to share his love for travel and create unforgettable experiences for others. Anirban is dedicated to curating unique and personalized travel packages that cater to every kind of traveler.",
   },
   {
     id: "rohit",
     name: "Rohit Dutta",
     role: "Co-Creator",
-    image: "/members/home/rohitdutta.jpg",
+    image: "/members/home/rohitdutta.webp",
     bio: "Rohit is a seasoned operations expert with a background in hospitality management. As the COO, he ensures that every aspect of our travel services runs smoothly, from logistics to customer support. Rohit's commitment to excellence and attention to detail guarantees that our customers have a seamless and enjoyable travel experience.",
   },
   {
     id: "sourav",
     name: "Sourav Sil",
     role: "Co-Creator",
-    image: "/members/home/souravsil.jpg",
+    image: "/members/home/souravsil.webp",
     bio: "Sourav is a creative marketing strategist with a passion for storytelling. As the CMO, he leads our marketing efforts to connect with travelers and share the unique experiences we offer. Sourav's innovative approach to marketing helps us reach a wider audience and inspire more people to explore the world with us.",
   },
 ];
@@ -225,5 +225,13 @@ export const whyChooseUsData = [
       "With a track record of successfully organizing trips for thousands of satisfied customers, we have built a reputation for reliability and excellence in the travel industry.",
   },
 ];
+
+export const socialMediaLinks = {
+  facebook: { href: "https://www.facebook.com/@bangalirstreetfood" },
+  instagram: { href: "https://www.instagram.com/bangalirstreetfood/" },
+  youtube: { href: "https://youtube.com/@bangalirstreetfood1198" },
+  whatsapp: { number: "+919064351230" },
+  email: { zoho: "contact@bangalirstreetfood.com"}
+};
 
 // ! add social media links, phone number, emails etc here @kankanmondal22

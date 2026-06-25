@@ -15,15 +15,17 @@ import {
 } from "@/components/ui/accordion";
 import {
   testimonialsData,
-  videos,
   images,
+  videos,
   faqData,
-  memberData,
   whyChooseUsData,
   homeMemberData,
 } from "@/lib/constants";
 import ContactForm from "@/components/forms/ContactForm";
 import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
+
+export const dynamic = 'force-static';
+
 
 export default function Page() {
   return (
@@ -36,7 +38,7 @@ export default function Page() {
       {/* Tablet image — shown only on tablet */}
       <div className="hidden h-full w-full overflow-hidden md:block lg:hidden">
         <Image
-          src="/hero/tab.png"
+          src="/hero/tab.webp"
           alt="App Preview Tablet"
           width={500}
           height={1000}
@@ -46,7 +48,7 @@ export default function Page() {
       {/* Mobile image — shown only on mobile */}
       <div className="block h-full w-full overflow-hidden md:hidden">
         <Image
-          src="/hero/mobile.png"
+          src="/hero/mobile.webp"
           alt="App Preview Mobile"
           width={500}
           height={1000}
@@ -102,14 +104,11 @@ export default function Page() {
                     >
                       <Image
                         src={member.image}
-                        height={300}
+                        height={200}
                         width={300}
                         alt={member.name}
                         className="aspect-3/2 w-56 object-cover sm:w-64 md:w-72"
                       />
-                      <p className="font-handwriting mt-3 text-center text-xl font-bold text-gray-800">
-                        {member.name}
-                      </p>
                       {/* Tape accent */}
                       <span className="absolute -top-3 left-1/2 h-6 w-16 -translate-x-1/2 -rotate-2 bg-amber-100/80 shadow-sm" />
                     </div>
@@ -140,7 +139,9 @@ export default function Page() {
 
               <div className="mt-8 flex w-fit flex-col gap-3 sm:flex-row sm:gap-4">
                 <Button asChild>
-                  <Link prefetch={false} href="/about">Read Our Full Story</Link>
+                  <Link prefetch={false} href="/about">
+                    Read Our Full Story
+                  </Link>
                 </Button>
                 <Button asChild className="bg-white" variant="outline">
                   <Link href="/package">View Packages</Link>
@@ -194,7 +195,7 @@ export default function Page() {
       </HomeSections>
       {/* What people say */}
       <HomeSections className="max-w-none bg-gray-50">
-        <div className="max-w-6xl mx-auto">
+        <div className="mx-auto max-w-6xl">
           <Testimonials
             data={testimonialsData}
             title="What Travelers Say"
@@ -253,7 +254,7 @@ export default function Page() {
       {/* CTA section */}
       <section
         className="relative mx-auto mb-32 max-w-6xl overflow-hidden rounded-lg bg-cover bg-center text-center text-white"
-        style={{ backgroundImage: "url('/pahar.jpeg')" }}
+        style={{ backgroundImage: "url('/pahar.webp')" }}
       >
         <div className="absolute inset-0 bg-black/60" />
         <div className="relative z-1 flex h-full w-full flex-col items-center justify-center p-4 backdrop-blur-xs md:flex-row">
@@ -262,6 +263,8 @@ export default function Page() {
             alt="Bangalir Street Food Logo"
             width={200}
             height={200}
+            fetchPriority="high"
+            quality={100} 
             className="m-4 rounded-full object-cover sm:mx-0 md:w-1/2 lg:px-16"
           />
           <div className="w-full p-4 md:w-1/2 lg:px-16">
