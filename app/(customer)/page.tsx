@@ -267,7 +267,7 @@ export default function Page() {
             quality={100} 
             className="m-4 rounded-full object-cover sm:mx-0 md:w-1/2 lg:px-16"
           />
-          <div className="w-full p-4 md:w-1/2 lg:px-16">
+          <div className="w-full p-4 md:w-1/2 lg:px-16 my-6">
             <ContactForm />
           </div>
         </div>
