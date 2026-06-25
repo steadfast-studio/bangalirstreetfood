@@ -161,7 +161,7 @@
 
 /* Hide scrollbar for all browsers */
 /* hide main page scrollbar */
-html,
+/* html,
 body {
   -ms-overflow-style: none;
   scrollbar-width: none;
@@ -170,7 +170,7 @@ body {
 html::-webkit-scrollbar,
 body::-webkit-scrollbar {
   display: none;
-}
+} */
 
 /* * HERO WAVY MASK */
 
