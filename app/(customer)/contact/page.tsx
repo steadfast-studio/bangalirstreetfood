@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { Mail, MapPin, Instagram, Youtube, Send } from "lucide-react";
+import WavyHero from "@/components/WavyHero";
 
 const ContactPage = () => {
   const [submitted, setSubmitted] = useState(false);
@@ -13,6 +14,14 @@ const ContactPage = () => {
 
   return (
     <div className="min-h-screen bg-amber-50/40 pt-24">
+      <WavyHero
+        title="Contact Us"
+        subtitle=""
+        description="Explore our hand-picked travel experiences. Pick the one that
+            excites you and book your next adventure today!"
+        bgPosition="bottom"
+        bgImage="/banners/snow.webp"
+      />
       {/* Header */}
       <header className="relative overflow-hidden border-b border-amber-200/60 bg-gradient-to-b from-orange-50 to-amber-50/40">
         <div

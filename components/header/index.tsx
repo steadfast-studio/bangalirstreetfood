@@ -97,8 +97,8 @@ const Navbar = () => {
           })}
 
           <Button asChild size="sm" className="group ml-3" variant="accent">
-            <Link href="/package" className="font-semibold">
-              <span className="">Book a Trip</span>
+            <Link href="/contact" className="font-semibold">
+              <span className="">Contact Us</span>
               <FaArrowRight className="ml-1 inline-block rounded-full bg-black p-1 font-semibold text-white transition-transform group-hover:translate-x-0.5" />
             </Link>
           </Button>
@@ -175,11 +175,11 @@ const Navbar = () => {
           <div className="mt-3 px-4">
             <Button asChild size="sm" className="w-full" variant="accent">
               <Link
-                href="/package"
+                href="/contact"
                 className="font-semibold"
                 onClick={() => setMobileOpen(false)}
               >
-                Book a Trip
+                Contact Us
               </Link>
             </Button>
           </div>

@@ -2,14 +2,19 @@
 
 import Image from "next/image";
 
+type ImagePosition = "top" | "top-left" | "top-right" | "center" | "bottom" | "bottom-left" | "bottom-right" | "left" | "right";
+
 type WavyHeroProps = {
   title: string;
   subtitle?: string;
   description?: string;
   bgImage: string;
+  bgPosition?: ImagePosition;
 };
 
-const WavyHero = ({ title, subtitle, description, bgImage }: WavyHeroProps) => {
+const WavyHero = ({ title, subtitle, description, bgImage, bgPosition = "center" }: WavyHeroProps) => {
+  const imgClass = `h-full w-full object-cover hero-mask-intersect object-${bgPosition}`;
+  
   return (
     <div className="relative h-125 w-full overflow-hidden sm:h-150">
       {/* Background image */}
@@ -21,7 +26,7 @@ const WavyHero = ({ title, subtitle, description, bgImage }: WavyHeroProps) => {
         priority
         sizes="100vw"
         fetchPriority="high"
-        className="h-full w-full object-cover object-center hero-mask-intersect"
+        className={imgClass}
       />
 
       {/* Overlay */}

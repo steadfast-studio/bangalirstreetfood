@@ -69,8 +69,9 @@ const Packages = async ({
         subtitle=""
         description="Explore our hand-picked travel experiences. Pick the one that
             excites you and book your next adventure today!"
-        bgImage="/pahar5.jpg"
-      />{" "}
+        bgPosition="bottom"
+        bgImage="/banners/package-banner.webp"
+      />
         {/* Package Grid */}
         <section className="mx-auto max-w-6xl px-4 py-10">
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
