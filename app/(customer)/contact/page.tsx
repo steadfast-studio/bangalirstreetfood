@@ -13,7 +13,7 @@ const ContactPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-amber-50/40 pt-24">
+    <div className="min-h-screen pt-24">
       <WavyHero
         title="Contact Us"
         subtitle=""
@@ -23,26 +23,19 @@ const ContactPage = () => {
         bgImage="/banners/snow.webp"
       />
       {/* Header */}
-      <header className="relative overflow-hidden border-b border-amber-200/60 bg-gradient-to-b from-orange-50 to-amber-50/40">
-        <div
-          className="pointer-events-none absolute inset-0 opacity-[0.05]"
-          style={{
-            backgroundImage:
-              "radial-gradient(circle at 1px 1px, #c2785a 1px, transparent 0)",
-            backgroundSize: "24px 24px",
-          }}
-        />
+      <header className="relative overflow-hidden border-b border-amber-200/60 bg-linear-to-b from-orange-50 to-amber-50/40">
+        <div className="pointer-events-none absolute inset-0 bg-teal-600 bg-mask-intersect" />
         <div className="relative mx-auto max-w-5xl px-6 py-16 text-center sm:px-8 sm:py-20">
-          <span className="font-handwriting text-base font-semibold uppercase tracking-[0.2em] text-orange-500">
+          <span className="font-handwriting text-base font-bold tracking-[0.2em] text-teal-950 uppercase">
             Drop us a line
           </span>
-          <h1 className="mt-3 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
+          <h1 className="mt-3 text-4xl font-bold tracking-tight text-gray-100 sm:text-5xl">
             Let&apos;s Plan Something
           </h1>
-          <p className="mx-auto mt-4 max-w-xl text-gray-600">
+          <p className="mx-auto mt-4 max-w-xl text-gray-300">
             Got a destination in mind, a date that won&apos;t budge, or just a
-            question about how we work? Write to us like you would a
-            postcard — we&apos;ll write back.
+            question about how we work? Write to us like you would a postcard —
+            we&apos;ll write back.
           </p>
         </div>
       </header>
@@ -54,7 +47,7 @@ const ContactPage = () => {
           <div className="relative lg:col-span-3">
             <div className="relative -rotate-1 rounded-sm bg-white p-6 shadow-[0_8px_30px_rgb(0,0,0,0.10)] ring-1 ring-black/5 sm:p-10">
               {/* Stamp */}
-              <div className="p-2 absolute -right-3 -top-4 hidden h-20 w-16 rotate-6 items-center justify-center rounded border-2 border-dashed border-orange-300/70 bg-orange-50 text-center text-[10px] font-semibold uppercase leading-tight tracking-widest text-orange-400 sm:flex">
+              <div className="absolute -top-4 -right-3 hidden h-20 w-16 rotate-6 items-center justify-center rounded border-2 border-dashed border-orange-300/70 bg-orange-50 p-2 text-center text-[10px] leading-tight font-semibold tracking-widest text-orange-400 uppercase sm:flex">
                 Sent with <br /> wanderlust
               </div>
 
@@ -68,8 +61,8 @@ const ContactPage = () => {
                   </h2>
                   <p className="mt-2 max-w-sm text-gray-600">
                     Thanks for writing in. We read every message and usually
-                    reply within 1–2 days — sometimes from an airport, so
-                    bear with us.
+                    reply within 1–2 days — sometimes from an airport, so bear
+                    with us.
                   </p>
                   <button
                     onClick={() => setSubmitted(false)}
@@ -150,7 +143,7 @@ const ContactPage = () => {
 
                   <button
                     type="submit"
-                    className="inline-flex items-center gap-2 rounded-full bg-gray-900 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-orange-600"
+                    className="inline-flex items-center gap-2 rounded-full bg-orange-600 px-6 py-3 text-sm font-semibold text-white transition-colors"
                   >
                     Send postcard
                     <Send className="h-4 w-4" />
@@ -164,7 +157,7 @@ const ContactPage = () => {
           <div className="lg:col-span-2">
             <div className="sticky top-28 space-y-6">
               <div>
-                <span className="font-handwriting text-sm font-semibold uppercase tracking-[0.2em] text-orange-500">
+                <span className="font-handwriting text-sm font-semibold tracking-[0.2em] text-orange-500 uppercase">
                   Field notes
                 </span>
                 <h2 className="mt-1 text-xl font-bold text-gray-900">
@@ -196,9 +189,7 @@ const ContactPage = () => {
                     <MapPin className="h-5 w-5" />
                   </div>
                   <div>
-                    <p className="font-semibold text-gray-900">
-                      Based out of
-                    </p>
+                    <p className="font-semibold text-gray-900">Based out of</p>
                     <p className="text-sm text-gray-600">
                       Hugli, West Bengal — but rarely home
                     </p>
