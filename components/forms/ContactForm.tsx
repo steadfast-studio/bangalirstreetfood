@@ -28,7 +28,7 @@ const ContactForm = ({
         className="placeholder:text-primary rounded-none border-white bg-white focus-visible:border-yellow-500 focus-visible:ring-yellow-500/70"
       />
       <Textarea
-        placeholder="Write your quary"
+        placeholder="Write your query"
         className="placeholder:text-primary rounded-none border-white bg-white focus-visible:border-yellow-500 focus-visible:ring-yellow-500/70"
       />
       <Button

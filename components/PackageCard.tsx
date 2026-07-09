@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
@@ -11,6 +14,7 @@ import {
 } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import PackageCardThumbnail from "./PackageCardThumbnail";
+import { FaShare } from "react-icons/fa";
 
 export interface PackageCardProps {
   id: string;
@@ -25,6 +29,8 @@ export interface PackageCardProps {
 }
 
 export default function PackageCard({ pkg }: { pkg: PackageCardProps }) {
+  const [copied, setCopied] = useState(false);
+
   const formattedNextDate = pkg.nextDate
     ? new Date(pkg.nextDate).toLocaleDateString("en-IN", {
         day: "numeric",
@@ -32,6 +38,34 @@ export default function PackageCard({ pkg }: { pkg: PackageCardProps }) {
         year: "numeric",
       })
     : "No upcoming dates";
+
+  const handleShare = async (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+
+    const shareUrl = `${window.location.origin}/package/${pkg.id}`;
+
+    if (navigator.share) {
+      try {
+        await navigator.share({
+          title: pkg.title,
+          text: `Check out this package: ${pkg.title}`,
+          url: shareUrl,
+        });
+      } catch (err) {
+        // user cancelled the share sheet, ignore
+      }
+      return;
+    }
+
+    try {
+      await navigator.clipboard.writeText(shareUrl);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch (err) {
+      console.error("Failed to copy link:", err);
+    }
+  };
 
   return (
     <Card className="group flex h-full flex-col overflow-hidden pt-0 transition-shadow hover:shadow-md">
@@ -114,13 +148,30 @@ export default function PackageCard({ pkg }: { pkg: PackageCardProps }) {
       </CardContent>
 
       {/* Actions */}
-      <CardFooter className="mt-auto flex gap-2 pt-0">
+      <CardFooter className="mt-auto flex items-center gap-2 pt-0">
         <Button variant="outline" className="flex-1" asChild>
           <Link href={`/package/${pkg.id}`}>View Details</Link>
         </Button>
         <Button className="flex-1" asChild>
           <Link href={`/booking/${pkg.id}`}>Book Now</Link>
         </Button>
+
+        <div className="relative">
+          <Button
+            type="button"
+            variant="outline"
+            size="icon"
+            onClick={handleShare}
+            aria-label="Share this package"
+          >
+            <FaShare className="h-4 w-4" />
+          </Button>
+          {copied && (
+            <span className="absolute -top-8 right-0 rounded bg-black/80 px-2 py-1 text-xs whitespace-nowrap text-white">
+              Link copied!
+            </span>
+          )}
+        </div>
       </CardFooter>
     </Card>
   );

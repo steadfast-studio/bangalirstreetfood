@@ -78,22 +78,22 @@ export default function Page() {
                 {homeMemberData.map((member, index) => {
                   const offset =
                     index % 3 === 0
-                      ? "-translate-x-12"
+                      ? "md:-translate-x-12"
                       : index % 3 === 1
-                        ? "translate-x-12"
-                        : "-translate-x-8";
+                        ? "md:translate-x-12"
+                        : "md:-translate-x-8";
                   const rotate =
                     index % 3 === 0
-                      ? "-rotate-6"
+                      ? "md:-rotate-6"
                       : index % 3 === 1
-                        ? "rotate-6"
-                        : "rotate-3";
+                        ? "md:rotate-6"
+                        : "md:rotate-3";
 
                   return (
                     <div
                       key={member.id}
-                      className={`relative ${offset} ${rotate} ${
-                        index !== 0 ? "-mt-28 md:-mt-32" : ""
+                      className={`relative ${offset} ${rotate} mb-6 md:mb-0 ${
+                        index !== 0 ? "md:-mt-28 lg:-mt-32" : ""
                       } rounded-sm bg-white p-3 pb-6 shadow-[0_8px_30px_rgb(0,0,0,0.12)] ring-1 ring-black/5 transition-all duration-300 ease-out hover:z-50 hover:-translate-y-8 hover:scale-105 hover:rotate-0 hover:shadow-2xl`}
                       style={{ zIndex: index }}
                     >
@@ -102,7 +102,7 @@ export default function Page() {
                         height={200}
                         width={300}
                         alt={member.name}
-                        className="aspect-3/2 w-56 object-cover sm:w-64 md:w-72"
+                        className="aspect-3/2 w-64 object-cover sm:w-64 md:w-72"
                       />
                       {/* Tape accent */}
                       <span className="absolute -top-3 left-1/2 h-6 w-16 -translate-x-1/2 -rotate-2 bg-amber-100/80 shadow-sm" />
@@ -259,10 +259,10 @@ export default function Page() {
             width={200}
             height={200}
             fetchPriority="high"
-            quality={100} 
+            quality={100}
             className="m-4 rounded-full object-cover sm:mx-0 md:w-1/2 lg:px-16"
           />
-          <div className="w-full p-4 md:w-1/2 lg:px-16 my-6">
+          <div className="my-6 w-full p-4 md:w-1/2 lg:px-16">
             <ContactForm />
           </div>
         </div>

@@ -93,14 +93,15 @@ export const testimonialsData = [
 ];
 
 export const videos: { src: string; type: "youtube" | "facebook" }[] = [
+  // {
+  //   src: "https://www.facebook.com/reel/1355896402836382",
+  //   type: "facebook",
+  // },
   {
-    src: "https://youtube.com/shorts/tgpjk1iYs6U?si=C0QmwyxVSCuBjfJD",
-    type: "youtube",
+    src: "https://www.facebook.com/reel/2085430212396432",
+    type: "facebook",
   },
-  {
-    src: "https://youtube.com/shorts/t35zgT7x1fk?si=QVW_DykSD-fmeqIE",
-    type: "youtube",
-  },
+  // { src: "https://www.facebook.com/reel/3885095588411041", type: "facebook" },
   {
     src: "https://youtube.com/shorts/MNTHqYfCkWg?si=M3kTkXl_0-xVXz25",
     type: "youtube",
@@ -231,7 +232,7 @@ export const socialMediaLinks = {
   instagram: { href: "https://www.instagram.com/bangalirstreetfood/" },
   youtube: { href: "https://youtube.com/@bangalirstreetfood1198" },
   whatsapp: { number: "+919064351230" },
-  email: { zoho: "contact@bangalirstreetfood.com"}
+  email: { zoho: "contact@bangalirstreetfood.com" },
 };
 
 // ! add social media links, phone number, emails etc here @kankanmondal22
